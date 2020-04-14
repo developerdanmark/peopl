@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;600&display=swap');
 html {
-  font-family: sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,6 +9,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", Helvetica, sans-serif;
 }
 article,
 aside,
@@ -94,7 +97,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: "Poppins", Helvetica, sans-serif;
   font-size: 1em;
 }
 figure {
@@ -199,8 +202,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  color: #153243;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -230,8 +232,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -247,8 +248,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -264,8 +264,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,8 +280,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -298,8 +296,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -315,8 +312,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -333,7 +329,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -385,6 +381,9 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
 }
 figure {
   margin-left: 0;
@@ -619,4 +618,366 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/** Norden Soft Css **/
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1260px;
+  }
+}
+
+.site-header a{
+  color: #fff;
+  font-family: "Poppins", Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+}
+.logo {
+  width: 100px;
+  height: auto;
+}
+.banner {
+  background: url('../images/bg-image.jpg');
+  padding-top: 100px;
+  color: #fff;
+  background-size: cover;
+}
+.banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+.btn-contact {
+  background-color: #00B67A;
+  border-radius: 5px !important;
+  height: 50px;
+  width: 193px;
+  line-height: 50px;
+  padding: 0 !important;
+}
+.btn-contact:hover {
+  color: #e1e1e1;
+}
+.btn-contact:focus {
+  box-shadow: none;
+}
+
+.banner .banner-title {
+  width: 667px;
+  font-size: 46px;
+  line-height: 58px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.banner .text-line {
+  position: relative;
+  width: 330px;
+  margin: 10px 0;
+  padding-left: 50px;
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif; 
+}
+
+.banner svg {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  fill: #fff;
+}
+
+.banner svg path {
+  width: 50px;
+  height: 50px;
+}
+
+.banner .logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .logo-block .badge-1 {
+  width: 90px;
+  height: 90px;
+  margin: 0 10px;
+}
+.banner .logo-block .badge-2 {
+  width: 81px;
+  height: 99px;
+  margin: 0 10px;
+}
+.banner .logo-block .badge-3 {
+  width: 137px;
+  height: 50px;
+  margin: 0 10px;
+}
+.banner .logo-block .badge-4 {
+  width: 150px;
+  height: 68px;
+  margin: 0 10px;
+}
+
+.banner-form {
+  background: #fff;
+  color: #153243;
+  padding: 48px 40px;
+  width: 405px;
+  border-radius: 5px;
+}
+
+.banner-form .form-title {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: bold;
+  color: #153243;
+  margin-bottom: 15px;
+}
+
+.banner-form .form-subtitle {
+  font-size: 16px;
+  line-height: 20px;
+  color: #153243;
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 24px;
+}
+
+.banner-form label {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #153243  ;
+}
+
+.banner-form input {
+  height: 50px;
+}
+
+.banner-form .btn-banner-form {
+  background-color: #00B67A;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+}
+
+.logo-block-full {
+  background: #f3f5f5;
+  height: 120px;
+}
+
+.logo-block-full .logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1044px;
+  height: 120px;
+}
+
+.logo-block-full .logos .kunde {
+  width: 110px;
+}
+
+.logo-block-full .logos .kunde img {
+  margin-bottom: 0;
+}
+
+.video-block .video-block-content {
+  text-align: center;
+  max-width: 833px;
+}
+
+.video-block .video-title {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: bold;
+  margin: 20px 0  ;
+}
+
+.video-block .video-description {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Work Sans', sans-serif;
+  max-width: 689px;
+}
+
+.video-block .video-button {
+  color: #153243;
+  width: 210px;
+  height: 50px;
+  border-color: #153243;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.video-block .video-button:hover {
+  color: #fff;
+  border-color: #153243;
+  background-color: #153243;
+}
+
+.services-block {
+  background: #e7eaec;
+}
+
+.services-block .services-desc {
+  max-width: 670px;
+  margin: 0 auto;
+  text-align: center;
+}
+.services-block .title {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.services-block .description {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.services-block .icon-cards {
+  max-width: 944px;
+  margin: 0 auto;
+}
+
+.services-block .icon-card {
+  background: #fff;
+  border: 1px solid #DBDFE2;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 10px;
+}
+
+.services-block .icon-card .icon-title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+
+.services-block .icon-card .icon-image {
+  margin: 28px 0;
+}
+
+.services-block .icon-card .icon-image.facebook {
+  width: 27px;
+  height: 50px;
+}
+
+.services-block .icon-card .icon-image.google {
+  width: 53px;
+  height: 50px;
+}
+
+.services-block .icon-card .icon-image.seo {
+  width: 50px;
+  height: 50px;
+}
+
+.services-block .icon-card .icon-image.amazon {
+  width: 50px;
+  height: 50px;
+}
+.services-block .icon-card .icon-image.mail {
+  width: 50px;
+  height: 50px;
+}
+.services-block .icon-card .icon-image.code {
+  width: 50px;
+  height: 50px;
+}
+
+.services-block .icon-card .icon-readmore {
+  font-size: 16px;
+  text-decoration: underline;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+}
+
+.color-block {
+  background: #153243;
+  color: #fff;
+}
+
+.color-block p {
+  margin-bottom: 0;
+}
+
+.color-block p span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.trustpilot-image {
+  width: 480px;
+}
+
+.trustpilot-image img {
+  margin-bottom: 0;
+}
+
+.videocard-block .card {
+  border-radius: 5px;
+  margin: 0 10px !important;
+  border: 1px solid #DBDFE2;
+  padding-bottom: 60px;
+}
+
+.videocard-block .card .card-title {
+  font-size: 22px;
+  line-height: 30px;
+}
+.videocard-block .card-body {
+  flex: none;
+}
+.videocard-block .card-body .kunde {
+  width: 90px;
+  height: 50px;
+  margin: 30px 0;
+}
+.videocard-block .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videocard-block .card-button {
+  color: #153243;
+  width: 210px;
+  height: 50px;
+  border-color: #153243;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.videocard-block .card-button:hover {
+  color: #fff;
+  border-color: #153243;
+  background-color: #153243;
+}
+
+.inline-form-title {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: bold;
+}
+
+.inline-from input {
+  height: 50px;
+}
+
+.inline-from input[type=submit] {
+  background-color: #00B67A;
+  border-color: #00B67A;
+  color: #fff;
+  height: 50px;
+}
+
+footer ul li {
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 10px;
 }
