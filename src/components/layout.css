@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;600&display=swap'); */
 html {
   font-family: "Poppins", Helvetica, sans-serif;
   -ms-text-size-adjust: 100%;
@@ -626,22 +626,63 @@ pre tt:after {
     max-width: 1260px;
   }
 }
-
+.content-title {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.btn {
+  width: max-content;
+  min-width: 150px;
+  line-height: 34px;
+}
 .site-header a{
   color: #fff;
   font-family: "Poppins", Helvetica, sans-serif;
   text-decoration: none;
   font-size: 16px;
 }
-.logo {
+.site-header.sticky {
+  background: #fff;
+  box-shadow: 1px 3px 5px rgba(0,0,0,.1);
+}
+.site-header.sub-page a,
+.site-header.sticky a{
+  color: #153243;
+}
+.site-header.sub-page .logodark,
+.site-header.sticky .logodark {
+  display: block !important;
+}
+.site-header.sub-page .logo,
+.site-header.sticky .logo {
+  display: none;
+}
+.logo,
+.logodark {
   width: 100px;
   height: auto;
 }
 .banner {
-  background: url('../images/bg-image.jpg');
+  /* background: url('../images/bg-image.jpg'); */
   padding-top: 100px;
   color: #fff;
   background-size: cover;
+}
+.banner-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+.banner-bg img {
+  width: 100%;
+  height: 100%;
+  z-index: -3;
 }
 .banner-content {
   display: flex;
@@ -649,8 +690,33 @@ pre tt:after {
   align-items: center;
   height: 800px;
 }
+
+.blog-banner {
+  /* height: 700px; */
+  padding-top: 96px;
+  background: #F3F5F5;
+}
+.blog-banner img {
+  margin-bottom: 0;
+} 
+.blog-banner .layer1 {
+  position: absolute;
+  z-index: 0;
+}
+.blog-banner .layer2 {
+  height: 100%;
+}
+
+.blog-banner .banner-title {
+  font-size: 46px;
+  line-height: 58px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
 .btn-contact {
   background-color: #00B67A;
+  color: #fff !important;
   border-radius: 5px !important;
   height: 50px;
   width: 193px;
@@ -663,7 +729,6 @@ pre tt:after {
 .btn-contact:focus {
   box-shadow: none;
 }
-
 .banner .banner-title {
   width: 667px;
   font-size: 46px;
@@ -671,7 +736,6 @@ pre tt:after {
   font-weight: bold;
   margin-bottom: 35px;
 }
-
 .banner .text-line {
   position: relative;
   width: 330px;
@@ -761,6 +825,15 @@ pre tt:after {
   width: 100%;
 }
 
+.btn-peopl {
+  background-color: #00B67A;
+  color: #fff;
+  height: 50px;
+  font-size: 16px;
+  line-height: 34px;
+  padding: 8px 34px;
+}
+
 .logo-block-full {
   background: #f3f5f5;
   height: 120px;
@@ -814,6 +887,10 @@ pre tt:after {
   color: #fff;
   border-color: #153243;
   background-color: #153243;
+}
+
+.embed-responsive {
+  border-radius: 5px;
 }
 
 .services-block {
@@ -891,11 +968,12 @@ pre tt:after {
   height: 50px;
 }
 
-.services-block .icon-card .icon-readmore {
+.services-block .icon-card a.icon-readmore {
   font-size: 16px;
   text-decoration: underline;
   font-family: 'Work Sans', sans-serif;
   font-weight: bold;
+  color: #153254;
 }
 
 .color-block {
@@ -935,6 +1013,9 @@ pre tt:after {
 .videocard-block .card-body {
   flex: none;
 }
+.videocard-block .card-body p {
+  margin-bottom: 0 !important;
+}
 .videocard-block .card-body .kunde {
   width: 90px;
   height: 50px;
@@ -952,6 +1033,7 @@ pre tt:after {
   border-color: #153243;
   border-radius: 5px;
   margin: 20px 0;
+  line-height: 35px;
 }
 
 .videocard-block .card-button:hover {
@@ -974,6 +1056,7 @@ pre tt:after {
   background-color: #00B67A;
   border-color: #00B67A;
   color: #fff;
+  font-size: 16px;
   height: 50px;
 }
 

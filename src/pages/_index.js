@@ -8,128 +8,129 @@ import SEO from "../components/seo"
 
 const IndexPage = () => {
   const images = useStaticQuery(graphql`
-  query {
-    badge1: file(relativePath: { eq: "badge-1.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+    query {
+      badge1: file(relativePath: { eq: "badge-1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    badge2: file(relativePath: { eq: "badge-2.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      badge2: file(relativePath: { eq: "badge-2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    badge3: file(relativePath: { eq: "badge-3.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      badge3: file(relativePath: { eq: "badge-3.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    badge4: file(relativePath: { eq: "badge-4.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      badge4: file(relativePath: { eq: "badge-4.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    kunde1: file(relativePath: { eq: "kunde-logo1.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      kunde1: file(relativePath: { eq: "kunde-logo1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    kunde2: file(relativePath: { eq: "kunde-logo2.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      kunde2: file(relativePath: { eq: "kunde-logo2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    kunde3: file(relativePath: { eq: "kunde-logo3.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      kunde3: file(relativePath: { eq: "kunde-logo3.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    kunde4: file(relativePath: { eq: "kunde-logo4.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      kunde4: file(relativePath: { eq: "kunde-logo4.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    kunde5: file(relativePath: { eq: "kunde-logo5.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      kunde5: file(relativePath: { eq: "kunde-logo5.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    kunde6: file(relativePath: { eq: "kunde-logo6.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      kunde6: file(relativePath: { eq: "kunde-logo6.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    facebook: file(relativePath: { eq: "facebook.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      facebook: file(relativePath: { eq: "facebook.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    google: file(relativePath: { eq: "google.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      google: file(relativePath: { eq: "google.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    seo: file(relativePath: { eq: "seo.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      seo: file(relativePath: { eq: "seo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    amazon: file(relativePath: { eq: "amazon.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      amazon: file(relativePath: { eq: "amazon.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    mail: file(relativePath: { eq: "mail.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      mail: file(relativePath: { eq: "mail.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    code: file(relativePath: { eq: "code.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      code: file(relativePath: { eq: "code.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-    trustpilot: file(relativePath: { eq: "trustpilot.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 150) {
-          ...GatsbyImageSharpFluid
+      },
+      trustpilot: file(relativePath: { eq: "trustpilot.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
-    },
-  }
-`)
+      },
+    }
+  `)
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -141,16 +142,16 @@ const IndexPage = () => {
               <div className="banner-title">Vi skaber målbare resultater for din forretning</div>
               <div className="text-line">
                 <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M40 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z" /></svg>
-              Gennem personlige relationer, der tager afsæt i dit behov her og nu.
-            </div>
+                Gennem personlige relationer, der tager afsæt i dit behov her og nu.
+              </div>
               <div className="text-line">
                 <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M40 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z" /></svg>
-              Specialister og certificeret i SEO og annoncering
-            </div>
+                Specialister og certificeret i SEO og annoncering
+              </div>
               <div className="text-line">
                 <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M40 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z" /></svg>
-              Effektiviserer din drift gennem automatisering
-            </div>
+                Effektiviserer din drift gennem automatisering
+              </div>
               <div className="logo-block">
                 <div className="badge-1"><Img fluid={images.badge1.childImageSharp.fluid} /></div>
                 <div className="badge-2"><Img fluid={images.badge2.childImageSharp.fluid} /></div>
@@ -185,7 +186,7 @@ const IndexPage = () => {
         </div>
       </div>
 
-      {/* ########### Logo block ########### */}
+      {/* ########### Brands block ########### */}
       <div className="logo-block-full">
         <div className="container">
           <div className="logos mx-auto">
@@ -318,7 +319,7 @@ const IndexPage = () => {
         </div>
       </div>
 
-      {/* ########### Videocard Block ########### */}
+      {/* ########### References Block ########### */}
 
       <div className="videocard-block py-5">
         <div className="container">
@@ -382,7 +383,7 @@ const IndexPage = () => {
         </div>
       </div>
 
-      {/* ########### Color Block ########### */}
+      {/* ########### Color Block Footer Form ########### */}
 
       <div className="color-block py-5">
         <div className="container">
