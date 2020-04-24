@@ -45,13 +45,28 @@ module.exports = {
         graphqlTag: 'default',
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: ['Poppins:500,600,700', 'Work Sans:200,400,500,600']
+    //     }
+    //   }
+    // },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: ['Poppins:500,600,700', 'Work Sans:200,400,500,600']
-        }
-      }
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [`500`, `600`,`700`]
+          },
+          {
+            family: `Work Sans`,
+            variants: [`200`, `400`,`500`,`600`]
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-minify`,
