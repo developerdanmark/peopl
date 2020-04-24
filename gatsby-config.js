@@ -52,6 +52,9 @@ module.exports = {
           families: ['Poppins:500,600,700', 'Work Sans:200,400,500,600']
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-minify`,
     }
   ],
 }
