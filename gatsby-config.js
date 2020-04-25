@@ -38,7 +38,7 @@ module.exports = {
 
         // a token with read permissions is required
         // if you have a private dataset
-        token: process.env.MY_SANITY_TOKEN,
+        token: 'sk4CNxGVO4Hsny4QJjKm7JkTzHsJSQexSCiCLVwx7A9FL0QUDcTvY9SECcNL9DAvzJZD626KGf7px9GMuRRtmYsYzYsSulvGXdtbgGGIZ67ZBkeWebgHH6Q9icOYFhMbLDJoRWI4ykfaHxYTheSEn7xO2FkByYQQ64jO2hJwd46otlh16Xpy',//process.env.MY_SANITY_TOKEN,
 
         // If the Sanity GraphQL API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
