@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from "../components/layout"
 
-const blogPost = () => {
+const blogPost = ({ pageContext = {} }) => {
 
     return(
         <Layout>

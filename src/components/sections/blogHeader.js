@@ -11,13 +11,13 @@ const BlogHeader = (data) => {
                     <div className="banner-title">{data.data.title}</div>
                     {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}
                     <div className="form-row inline-from w-100 py-5 pr-5">
-                        <div class="form-group col-md-7">
-                            <label htmlFor="i-email">Email</label>
-                            <input type="email" id="i-email" class="form-control" />
+                        <div className="form-group col-md-7">
+                            <label htmlFor="b-email">Email</label>
+                            <input type="email" id="b-email" className="form-control" />
                         </div>
-                        <div class="form-group col-md-5">
+                        <div className="form-group col-md-5">
                             <label htmlFor="name">&nbsp;</label>
-                            <input type="submit" id="name" class="form-control" value="Tilmeld nyhedsbrev" />
+                            <input type="submit" id="name" className="form-control" value="Tilmeld nyhedsbrev" />
                         </div>
                     </div>
                 </div>

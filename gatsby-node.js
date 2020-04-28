@@ -9,6 +9,48 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const result = await graphql(`
       query allData {
+        allSanityPost {
+          edges {
+            node {
+              _key
+              title
+              _rawBody
+              publishedAt
+              slug {
+                current
+              }
+              categories {
+                title
+                description
+                _id
+                slug {
+                  current
+                }
+              }
+              mainImage {
+                asset {
+                  fluid {
+                    src
+                    srcWebp
+                  }
+                }
+              }
+              author {
+                _key
+                _rawBio
+                name
+                image {
+                  asset {
+                    fluid {
+                      src
+                      srcWebp
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
         allSanityRoute {
           edges {
             node {
@@ -19,6 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
             page {
               _id
               title
+              isWhite
               customClass
               sections {
                 ... on SanityHomeHeader {
@@ -210,8 +253,34 @@ exports.createPages = async ({ graphql, actions }) => {
                     height
                     title
                   }
-
-
+                  ... on SanityBlogSection {
+                    _key
+                    _type
+                    title
+                  }
+                  ... on SanityPageHeader {
+                    _key
+                    _type
+                    title
+                    tag
+                    _rawBody
+                    bgImage {
+                      asset {
+                        fluid {
+                          src
+                          srcWebp
+                        }
+                      }
+                    }
+                    icon {
+                      asset {
+                        fluid {
+                          src
+                          srcWebp
+                        }
+                      }
+                    }
+                  }
 
               }
             }
@@ -229,11 +298,21 @@ exports.createPages = async ({ graphql, actions }) => {
     const pages = result.data.allSanityRoute.edges || []
     pages.forEach((edge, index) => {
       const path = `${edge.node.slug.current}`
-      const home = edge.node.slug.current == '/' ? true : false
+      // const home = edge.node.slug.current == '/' ? true : false
       createPage({
         path,
         component: require.resolve("./src/templates/page.js"),
-        context: { slug: edge.node.slug.current, page: edge.node.page, home: home },
+        context: { slug: edge.node.slug.current, page: edge.node.page },
+      })
+    })
+
+    const posts = result.data.allSanityPost.edges || []
+    posts.forEach((edge, index) => {
+      const path = `/blog/${edge.node.slug.current}`
+      createPage({
+        path,
+        component: require.resolve("./src/templates/blog-post.js"),
+        context: { slug: edge.node.slug.current, post: edge.node.post },
       })
     })
   }

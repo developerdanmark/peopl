@@ -2,6 +2,9 @@ import React from 'react'
 import BlockContent from "@sanity/block-content-to-react"
 
 const ColoredSection = (data) => {
+    
+   
+
     return (
         <>
             {/* ########### Color Block ########### */}

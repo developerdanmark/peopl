@@ -14,19 +14,24 @@ import Img from "gatsby-image"
  */
 
 const Image = () => {
-  const data = useStaticQuery(graphql`
+  const images = useStaticQuery(graphql`
     query {
-      logor: file(relativePath: { eq: "logo.png" }) {
+      footerbadges: file(relativePath: { eq: "footerbadges.png" }) {
         childImageSharp {
-          fluid(maxWidth: 150) {
+            fluid(maxWidth: 1500) {
             ...GatsbyImageSharpFluid
-          }
+            }
         }
       }
     }
   `)
 
-  return <Img fluid={data.logo.childImageSharp.fluid} />
+  // return <Img fluid={data.logo.childImageSharp.fluid} />
+  return (
+    <div className="logo-block mt-4">
+      <div className="footerbadges"><Img fluid={images.footerbadges.childImageSharp.fluid} /></div>
+    </div>
+  )
 }
 
 export default Image

@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
+import Image from './image';
 
-const footer = () => {
+const footer = ({data}) => {
+
     return (
         <>
             {/* ########### Color Block Footer Form ########### */}
@@ -15,21 +17,21 @@ const footer = () => {
                         </div>
                     </div>
                     <div className="row form-row inline-from py-5">
-                        <div class="form-group col-md-3">
+                        <div className="form-group col-md-3">
                             <label htmlFor="i-name">Navn</label>
-                            <input type="text" id="i-name" class="form-control" />
+                            <input type="text" id="i-name" className="form-control" />
                         </div>
-                        <div class="form-group col-md-3">
+                        <div className="form-group col-md-3">
                             <label htmlFor="i-phone">Telefon</label>
-                            <input type="tel" id="i-phone" class="form-control" />
+                            <input type="tel" id="i-phone" className="form-control" />
                         </div>
-                        <div class="form-group col-md-3">
+                        <div className="form-group col-md-3">
                             <label htmlFor="i-email">Email</label>
-                            <input type="email" id="i-email" class="form-control" />
+                            <input type="email" id="i-email" className="form-control" />
                         </div>
-                        <div class="form-group col-md-3">
+                        <div className="form-group col-md-3">
                             <label htmlFor="name">&nbsp;</label>
-                            <input type="submit" id="name" class="form-control" value="Kontakt mig" />
+                            <input type="submit" id="name" className="form-control" value="Kontakt mig" />
                         </div>
                     </div>
                 </div>
@@ -39,22 +41,22 @@ const footer = () => {
                     <div className="col-md-3">
                         <h5>Ydelser og viden</h5>
                         <ul className="list-unstyled text-small">
-                            <li><Link className="text-muted" href="#">Blog</Link></li>
-                            <li><Link className="text-muted" href="#">Facebook Ads</Link></li>
-                            <li><Link className="text-muted" href="#">Google Ads</Link></li>
-                            <li><Link className="text-muted" href="#">Seo</Link></li>
-                            <li><Link className="text-muted" href="#">E-mail marketing</Link></li>
-                            <li><Link className="text-muted" href="#">Amazon</Link></li>
-                            <li><Link className="text-muted" href="#">Udvikling</Link></li>
+                            <li><Link className="text-muted" to="#">Blog</Link></li>
+                            <li><Link className="text-muted" to="#">Facebook Ads</Link></li>
+                            <li><Link className="text-muted" to="#">Google Ads</Link></li>
+                            <li><Link className="text-muted" to="#">Seo</Link></li>
+                            <li><Link className="text-muted" to="#">E-mail marketing</Link></li>
+                            <li><Link className="text-muted" to="#">Amazon</Link></li>
+                            <li><Link className="text-muted" to="#">Udvikling</Link></li>
                         </ul>
                     </div>
                     <div className="col-md-3">
                         <h5>Følg os</h5>
                         <ul className="list-unstyled text-small">
-                            <li><Link className="text-muted" href="#">Sitemap</Link></li>
-                            <li><Link className="text-muted" href="#">Job</Link></li>
-                            <li><Link className="text-muted" href="#">Privatlivspolitik</Link></li>
-                            <li><Link className="text-muted" href="#">Betingelser</Link></li>
+                            <li><Link className="text-muted" to="#">Sitemap</Link></li>
+                            <li><Link className="text-muted" to="#">Job</Link></li>
+                            <li><Link className="text-muted" to="#">Privatlivspolitik</Link></li>
+                            <li><Link className="text-muted" to="#">Betingelser</Link></li>
                         </ul>
                     </div>
                     <div className="col-md-3">
@@ -68,6 +70,15 @@ const footer = () => {
                             Mail:  info@peopl.dk <br />
                             CVR: 37995193
                         </p>
+                    </div>
+                    <div className="col-md-12">
+                        <div className="logo-block mt-4">
+                            <Image />
+                            {/* <div className="badge-1"><Img fluid={images.badge1.childImageSharp.fluid} /></div>
+                            <div className="badge-2"><Img fluid={images.badge2.childImageSharp.fluid} /></div>
+                            <div className="badge-3"><Img fluid={images.badge3.childImageSharp.fluid} /></div>
+                            <div className="badge-4"><Img fluid={images.badge4.childImageSharp.fluid} /></div> */}
+                        </div>
                     </div>
                 </div>
             </footer>

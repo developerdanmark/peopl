@@ -4,7 +4,7 @@ import React, { useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
-const Header = ({ siteTitle, home }) => {
+const Header = ({ siteTitle, navbarWhite }) => {
   useEffect(() => {
     window.onscroll = function() {myFunction()};
 
@@ -56,7 +56,7 @@ const Header = ({ siteTitle, home }) => {
   `)
 
   return (  
-    <nav id="navbar" className={`site-header fixed-top py-3 ${home ? '' : 'sub-page'}`}>
+    <nav id="navbar" className={`site-header fixed-top py-3 ${navbarWhite ? '' : 'white'}`}>
       <div className="container d-flex flex-column flex-md-row justify-content-between">
         <a className="logo py-2" href="/" aria-label="Product">
           <Img fluid={data.logo.childImageSharp.fluid} />
@@ -65,9 +65,9 @@ const Header = ({ siteTitle, home }) => {
           <Img fluid={data.logodark.childImageSharp.fluid} />
         </a>
         <div className="d-flex justify-content-end align-items-center">
-          {data.menus.edges[0].node.routes.map((q) => {
+          {data.menus.edges[0].node.routes.map((q, i) => {
             return(
-              <Link className="py-2 px-4 d-none d-md-inline-block" to={q.routes && q.routes.slug.current} > {q.title} </Link>
+              <Link key={i} className="py-2 px-4 d-none d-md-inline-block" to={q.routes && q.routes.slug.current} > {q.title} </Link>
             )
           })}
           <Link className="py-2 px-5 d-none d-md-inline-block ml-4 btn btn-contact" to="contact">Kontakt</Link>

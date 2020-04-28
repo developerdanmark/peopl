@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from "../components/layout"
-import { HomeHeader,
+import { 
+    HomeHeader,
+    PageHeader,
     BrandSection,
     VideoSection,
     ServicesSection,
@@ -12,13 +14,15 @@ import { HomeHeader,
     LeftImageSection,
     RightImageSection,
     TitleSection,
-    Space
+    Space,
+    BlogSection,
+    ContentSection
 } from "../components/sections"
 
 const page = ({ pageContext = {} }) => {
 
     return (
-        <Layout home={pageContext.home}>
+        <Layout navbarWhite={pageContext.page.isWhite}>
             {!pageContext.page && <div>No data</div>}
             {pageContext.page && !pageContext.page.sections && <div>No sections</div>}
             {pageContext.page &&
@@ -27,55 +31,67 @@ const page = ({ pageContext = {} }) => {
                     switch (section._type) {
                         case 'homeHeader':
                             return (
-                                <HomeHeader data={section} />
+                                <HomeHeader key={i} data={section} />
                             )
                         case 'brandSection':
                             return (
-                                <BrandSection data={section} />
+                                <BrandSection key={i} data={section} />
                             )
                         case 'videoSection':
                             return (
-                                <VideoSection data={section} />
+                                <VideoSection key={i} data={section} />
                             )
                         case 'servicesSection':
                             return (
-                                <ServicesSection data={section} />
+                                <ServicesSection key={i} data={section} />
                             )
                         case 'referencesSection':
                             return (
-                                <ReferencesSection data={section} />
+                                <ReferencesSection key={i} data={section} />
                             )
                         case 'coloredSection':
                             return (
-                                <ColoredSection data={section} />
+                                <ColoredSection key={i} data={section} />
                             )
                         case 'blogHeader': 
                             return (
-                                <BlogHeader data={section} />
+                                <BlogHeader key={i} data={section} />
                             )
                         case 'servicesHeader':
                             return (
-                                <ServicesHeader data={section} />
+                                <ServicesHeader key={i} data={section} />
                             )
                         case 'referencesHeader':
                             return (
-                                <ReferencesHeader data={section} />
+                                <ReferencesHeader key={i} data={section} />
                             )
                         case 'leftImageSection':
                             return (
-                                <LeftImageSection data={section} />
+                                <LeftImageSection key={i} data={section} />
                             )
                         case 'RightImageSection':
                             return (
-                                <RightImageSection data={section} />
+                                <RightImageSection key={i} data={section} />
                             )
                         case 'space':
                             return (
-                                <Space data={section} />
+                                <Space key={i} data={section} />
                             )
                         case 'titleSection':
                             return (
-                                <TitleSection data={section} />
+                                <TitleSection key={i} data={section} />
+                            )
+                        case 'blogSection':
+                            return (
+                                <BlogSection key={i} data={section} />
+                            )
+                        case 'pageHeader':
+                            return (
+                                <PageHeader key={i} data={section} />
+                            )
+                        case 'contentSection':
+                            return (
+                                <ContentSection key={i} data={section} />
                             )
                         default:
                             return(<div>...{JSON.stringify(section._type)}</div>)

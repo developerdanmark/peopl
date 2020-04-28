@@ -7,7 +7,7 @@ import Footer from "./footer"
 import "./css/bootstrap.min.css"
 import "./layout.css"
 
-const Layout = ({ home, children }) => {
+const Layout = ({ navbarWhite, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,7 +20,7 @@ const Layout = ({ home, children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} home={home} />
+      <Header siteTitle={data.site.siteMetadata.title} navbarWhite={navbarWhite} />
         <main>{children}</main>
       <Footer />
     </>
