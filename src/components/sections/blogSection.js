@@ -65,39 +65,39 @@ const BlogSection = (data) => {
         }
     `)
 
-    const portfolio = [
-        {
-            name: "My best client",
-            category: ["all", "frontend", "ux-ui"]
-        },
-        {
-            name: "My favorite case",
-            category: ["all", "mobile", "ux-ui"]
-        },
-        {
-            name: "A old job",
-            category: ["all", "frontend"]
-        },
-        {
-            name: "It is a really cool website",
-            category: ["all", "frontend", "ux-ui"]
-        },
-        {
-            name: "Something more",
-            category: ["all", "others"]
-        }
-    ];
+    // const portfolio = [
+    //     {
+    //         name: "My best client",
+    //         category: ["all", "frontend", "ux-ui"]
+    //     },
+    //     {
+    //         name: "My favorite case",
+    //         category: ["all", "mobile", "ux-ui"]
+    //     },
+    //     {
+    //         name: "A old job",
+    //         category: ["all", "frontend"]
+    //     },
+    //     {
+    //         name: "It is a really cool website",
+    //         category: ["all", "frontend", "ux-ui"]
+    //     },
+    //     {
+    //         name: "Something more",
+    //         category: ["all", "others"]
+    //     }
+    // ];
     const [filter, setFilter] = useState("all");
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        setProjects(portfolio);
+        setProjects(data.posts);
     }, []);
 
     useEffect(() => {
         setProjects([]);
 
-        const filtered = portfolio.map(p => ({
+        const filtered = projects.map(p => ({
             ...p,
             filtered: p.category.includes(filter)
         }));
@@ -106,6 +106,9 @@ const BlogSection = (data) => {
 
     return (
         <div className="container py-5">
+        <code>
+            {JSON.stringify(data.posts)}
+        </code>
             <div className="portfolio__labels">
                 <button className="post-filter-button"
                     active={filter === "all"}

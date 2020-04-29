@@ -1,4 +1,5 @@
 import React from 'react'
+import LazyLoad from 'react-lazyload'
 
 const BrandSection = (data) => {
     return (
@@ -7,11 +8,13 @@ const BrandSection = (data) => {
             <div className="logo-block-full">
                 <div className="container">
                     <div className="logos mx-auto">
-                        {data.data.brandImages.map((q) => {
-                            return (
-                                <div className="kunde"><img src={q.asset.fluid.srcWebp} alt={q.title} /></div>
-                            )
-                        })}
+                        <LazyLoad>
+                            {data.data.brandImages.map((q) => {
+                                return (
+                                    <div className="kunde"><img src={q.asset.fluid.srcWebp} alt={q.title} /></div>
+                                )
+                            })}
+                        </LazyLoad>
                     </div>
                 </div>
             </div>
