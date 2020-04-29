@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useStaticQuery } from 'gatsby';
-import BlockContent from "@sanity/block-content-to-react"
+// import BlockContent from "@sanity/block-content-to-react"
 import Moment from 'react-moment';
 
 const BlogSection = (data) => {

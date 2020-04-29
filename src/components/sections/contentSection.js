@@ -1,10 +1,41 @@
 import React, { useEffect } from 'react'
 import BlockContent from "@sanity/block-content-to-react"
 import urlBuilder from "@sanity/image-url";
+import { Link, useStaticQuery } from 'gatsby';
 
 const urlFor = source => urlBuilder({ projectId: "0ionf5c6", dataset: "production" }).image(source);
 
 const ContentSection = (data) => {
+
+    const posts = useStaticQuery(graphql`
+        {
+            data: allSanityPost {
+                edges {
+                    node {
+                        _key
+                        title
+                        _rawBody
+                        excerpt
+                        slug {
+                            current
+                        }
+                    }
+                }
+            }
+            categories: allSanityCategory {
+                edges {
+                    node {
+                        _id
+                        _type
+                        title
+                        slug {
+                            current
+                        }
+                    }
+                }
+            }
+        }
+    `)
 
     const serializer = {
         types: {
@@ -20,7 +51,6 @@ const ContentSection = (data) => {
             }
         }
     }
-    
 
     useEffect(() => {
         // var headings = document.querySelectorAll("h1");
@@ -38,7 +68,23 @@ const ContentSection = (data) => {
                 </div>
                 <div className="col-md-4">
                     <div className="sidebar">
-                        <div id="demo" className="headings"></div>
+                        {/* <div id="demo" className="headings"></div> */}
+                        <div className="title">Seneste blogindlæg</div>
+                        <ul className="category-list">
+                            {posts.data.edges.slice(0, 5).map((q, i) => {
+                                return (
+                                    <li key={i} className={q.node.slug.current}> <Link to={'blog/' + q.node.slug.current}> {q.node.title} {i} </Link> </li>
+                                )
+                            })}
+                        </ul>
+                        <div className="title">Kategorier</div>
+                        <ul className="category-list">
+                            {posts.categories.edges.map((q, i) => {
+                                return (
+                                    <li key={i} className={q.node.slug.current}> <Link to={'category/' + q.node.slug.current}> {q.node.title} </Link> </li>
+                                )
+                            })}
+                        </ul>
                     </div>
                 </div>
             </div>

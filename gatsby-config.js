@@ -3,6 +3,7 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    siteUrl: `https://peopl.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -71,5 +72,50 @@ module.exports = {
     {
       resolve: `gatsby-plugin-minify`,
     },
-  ],
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      // options: {
+      //   configFile: 'robots-txt.config.js'
+      // }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "YOUR_GOOGLE_TAGMANAGER_ID",
+  
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+  
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+  
+        // Specify optional GTM environment details.
+        gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
+        gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
+        dataLayerName: "YOUR_DATA_LAYER_NAME",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: 'pixel id here',
+      },
+    },
+    {
+      resolve: "gatsby-source-googlemaps-static",
+      options: {
+          key: "Fe_wXr8-LJ6EIcT8VH9UwftHRKM=",//process.env.GOOGLE_MAPS_STATIC_API_KEY,
+          center: "41.8781,-87.6298",
+      },
+  },
+  ]
 }
