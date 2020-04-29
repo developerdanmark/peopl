@@ -9,12 +9,25 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const result = await graphql(`
       query allData {
+        allSanityCategory {
+          edges {
+            node {
+              _id
+              _type
+              title
+              slug {
+                current
+              }
+            }
+          }
+        }
         allSanityPost {
           edges {
             node {
               _key
               title
               _rawBody
+              excerpt
               publishedAt
               slug {
                 current
@@ -307,12 +320,13 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     const posts = result.data.allSanityPost.edges || []
+    const categories = result.data.allSanityCategory.edges || []
     posts.forEach((edge, index) => {
       const path = `/blog/${edge.node.slug.current}`
       createPage({
         path,
         component: require.resolve("./src/templates/blog-post.js"),
-        context: { slug: edge.node.slug.current, post: edge.node.post },
+        context: { slug: edge.node.slug.current, post: edge.node, posts: posts, categories: categories },
       })
     })
   }

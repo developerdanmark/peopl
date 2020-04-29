@@ -817,6 +817,32 @@ pre tt:after {
   text-decoration: underline;
 }
 
+.post-page {
+  padding-top: 150px;
+}
+.post-page .post-date {
+  color: #8F8F8F;
+  opacity: .6;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.post-page .tag {
+  color: #E59385;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.post-page .post-image {
+  max-width: 900px;
+  margin: 20px auto;
+}
+.post-page .post-image img {
+  width: 100%;
+  height: auto;
+}
+
 .btn-contact {
   background-color: #00B67A;
   color: #fff !important;

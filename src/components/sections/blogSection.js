@@ -13,6 +13,7 @@ const BlogSection = (data) => {
                 _key
                 title
                 _rawBody
+                excerpt
                 slug {
                   current
                 }
@@ -156,7 +157,9 @@ const BlogSection = (data) => {
                                             <div className="post-content">
                                                 {q.node.categories.map((d, i) => { return <div className="tag"> {d.title} </div> })}
                                                 <div className="post-title"> {q.node.title} </div>
-                                                {q.node._rawBody && <BlockContent blocks={q.node._rawBody} />}
+                                                {/* {JSON.stringify(q.node)} */}
+                                                <p className="post-excerpt"> {q.node.excerpt} </p>
+                                                {/* {q.node._rawBody && <BlockContent blocks={q.node._rawBody} />} */}
                                                 <Link to={'blog/' + q.node.slug.current} className="post-link">&nbsp;</Link>
                                                 <span className="post-date">
                                                     <Moment format="D. MMM YYYY" >{q.node.publishedAt}</Moment>
@@ -175,7 +178,8 @@ const BlogSection = (data) => {
                                             <div className="post-content">
                                                 {q.node.categories.map((d, i) => { return <div className="tag"> {d.title} </div> })}
                                                 <div className="post-title"> {q.node.title} </div>
-                                                {q.node._rawBody && <BlockContent blocks={q.node._rawBody} />}
+                                                <p className="post-excerpt"> {q.node.excerpt} </p>
+                                                {/* {q.node._rawBody && <BlockContent blocks={q.node._rawBody} />} */}
                                                 <Link to={'blog/' + q.node.slug.current} className="post-link">&nbsp;</Link>
                                                 <span className="post-date">
                                                     <Moment format="D. MMM YYYY" >{q.node.publishedAt}</Moment>

@@ -1,9 +1,79 @@
 import React from 'react'
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from './image';
 
-const footer = ({data}) => {
+const Footer = ({data}) => {
 
+    const footerData = useStaticQuery(
+        graphql`
+          query {
+            f1: allSanityFooterBlock1 {
+              edges {
+                node {
+                  _key
+                  _type
+                  title
+                  link {
+                    _id
+                    title
+                    slug {
+                      current
+                    }
+                  }
+                }
+              }
+            }
+            f2: allSanityFooterBlock2 {
+              edges {
+                node {
+                  _id
+                  _type
+                  title
+                  link {
+                    title
+                    slug {
+                      current
+                    }
+                  }
+                }
+              }
+            }
+            f3: allSanityFooterBlock3 {
+              edges {
+                node {
+                  _id
+                  _type
+                  title
+                  _rawText
+                }
+              }
+            }
+            f4: allSanityFooterBlock4 {
+              edges {
+                node {
+                  _id
+                  _type
+                  title
+                  mapLong
+                  mapLat
+                }
+              }
+            }
+            f5: allSanityFooterForm {
+              edges {
+                node {
+                  _id
+                  _type
+                  title
+                  description
+                }
+              }
+            }
+          }
+        `
+    )
+      
     return (
         <>
             {/* ########### Color Block Footer Form ########### */}
@@ -39,15 +109,20 @@ const footer = ({data}) => {
             <footer className="container py-5">
                 <div className="row">
                     <div className="col-md-3">
-                        <h5>Ydelser og viden</h5>
+                        <h5> {footerData.f1.edges.map((q, i) => {
+                            return( q.node.title)
+                        })} </h5>
+                        
                         <ul className="list-unstyled text-small">
-                            <li><Link className="text-muted" to="#">Blog</Link></li>
-                            <li><Link className="text-muted" to="#">Facebook Ads</Link></li>
-                            <li><Link className="text-muted" to="#">Google Ads</Link></li>
-                            <li><Link className="text-muted" to="#">Seo</Link></li>
-                            <li><Link className="text-muted" to="#">E-mail marketing</Link></li>
-                            <li><Link className="text-muted" to="#">Amazon</Link></li>
-                            <li><Link className="text-muted" to="#">Udvikling</Link></li>
+                            {footerData.f1.edges.map((q, i) => {
+                                return (
+                                    q.node.link.map((n, i) => {
+                                        return (
+                                            <li><Link className="text-muted" to={n.slug.current}> {n.title} </Link></li>
+                                        )
+                                    })
+                                )
+                            })}
                         </ul>
                     </div>
                     <div className="col-md-3">
@@ -86,4 +161,4 @@ const footer = ({data}) => {
     )
 }
 
-export default footer
+export default Footer
