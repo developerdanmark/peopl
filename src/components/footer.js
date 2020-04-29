@@ -179,7 +179,7 @@ const Footer = ({ data }) => {
             })}
 
             <ul className="list-unstyled text-small">
-              <li><Link className="text-muted" to="/sitemap.xml">Sitemap</Link></li>
+              <li><a className="text-muted" href="/sitemap.xml" target="_blank" rel="noopener noreferrer" >Sitemap</a></li>
               {footerData.f2.edges.map((q, i) => {
                 return (
                   q.node.link.map((n, i) => {
