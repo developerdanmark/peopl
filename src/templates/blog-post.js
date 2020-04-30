@@ -33,7 +33,7 @@ const blogPost = ({ pageContext = {} }) => {
                     <div className="row pb-5">
                         <div className="col-md-8 pb-5">
                             <div className="post-image">
-                                {pageContext.post.mainImage && <img src={pageContext.post.mainImage.asset.fluid.srcWebp} alt={pageContext.post.title} />}
+                                {pageContext.post.mainImage && <img src={pageContext.post.mainImage.asset.fluid.src} alt={pageContext.post.title} />}
                             </div>
                             {pageContext.post.categories.map((q, i) => {
                                 return (
