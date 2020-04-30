@@ -14,23 +14,23 @@ const ReferencesSection = (data) => {
                         <div class="card-deck">
                             {data.data.servicesList.map((q) => {
                                 return (
-                                    <div class="card overflow-hidden">
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <LazyLoad>
+                                    <LazyLoad>
+                                        <div class="card overflow-hidden">
+                                            <div class="embed-responsive embed-responsive-16by9">
+
                                                 <iframe class="embed-responsive-item" title={q.title} src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-                                            </LazyLoad>
-                                        </div>
-                                        <div class="card-body">
-                                            <LazyLoad>
+
+                                            </div>
+                                            <div class="card-body">
                                                 <div className="kunde"><img src={q.image.asset.fluid.src} alt={q.title} /></div>
-                                            </LazyLoad>
-                                            <h5 class="card-title"> {q.title && q.title} </h5>
-                                            {q._rawBody && <BlockContent blocks={q._rawBody} />}
+                                                <h5 class="card-title"> {q.title && q.title} </h5>
+                                                {q._rawBody && <BlockContent blocks={q._rawBody} />}
+                                            </div>
+                                            <div className="footer">
+                                                <Link to={q.route && q.route.slug.current} className="btn btn-outline-secondary card-button">Se case</Link>
+                                            </div>
                                         </div>
-                                        <div className="footer">
-                                            <Link to={q.route && q.route.slug.current} className="btn btn-outline-secondary card-button">Se case</Link>
-                                        </div>
-                                    </div>
+                                    </LazyLoad>
                                 )
                             })}
                         </div>
