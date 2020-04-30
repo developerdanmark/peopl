@@ -784,12 +784,16 @@ pre tt:after {
   line-height: 20px;
   padding: 0;
   padding-bottom: 10px;
+  display: inline;
+  cursor: pointer;
+}
+.post-filter-button.active {
+  border-bottom: 1px solid #153243;
+  font-weight: bold;
 }
 /* .post-filter-button:hover, */
 .post-filter-button:focus {
   outline: none;
-  border-bottom: 1px solid #153243;
-  font-weight: bold;
 }
 .sidebar {
   width: 100%;

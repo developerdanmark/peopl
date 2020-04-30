@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link, useStaticQuery } from 'gatsby';
-// import BlockContent from "@sanity/block-content-to-react"
 import Moment from 'react-moment';
 
 const BlogSection = (data) => {
@@ -65,91 +64,41 @@ const BlogSection = (data) => {
         }
     `)
 
-    // const portfolio = [
-    //     {
-    //         name: "My best client",
-    //         category: ["all", "frontend", "ux-ui"]
-    //     },
-    //     {
-    //         name: "My favorite case",
-    //         category: ["all", "mobile", "ux-ui"]
-    //     },
-    //     {
-    //         name: "A old job",
-    //         category: ["all", "frontend"]
-    //     },
-    //     {
-    //         name: "It is a really cool website",
-    //         category: ["all", "frontend", "ux-ui"]
-    //     },
-    //     {
-    //         name: "Something more",
-    //         category: ["all", "others"]
-    //     }
-    // ];
-    const [filter, setFilter] = useState("all");
-    const [projects, setProjects] = useState([]);
+    const [category, setCategory] = useState("all");
+    // const [postList, setPostList] = useState([]);
 
-    useEffect(() => {
-        setProjects(data.posts);
-    }, []);
 
-    useEffect(() => {
-        setProjects([]);
-
-        const filtered = projects.map(p => ({
-            ...p,
-            filtered: p.category.includes(filter)
-        }));
-        setProjects(filtered);
-    }, [filter]);
+    const result = posts.data.edges
+    .map(item => ({
+        ...item,
+        categories: item.node.categories
+        .filter(child => child.slug.current.includes(category.toLowerCase()))
+    }))
+    .filter(item => item.categories.length > 0)
+    
+    const postList = category === "all" ? posts.data.edges : result
 
     return (
         <div className="container py-5">
-        <code>
-            {JSON.stringify(data.posts)}
-        </code>
-            <div className="portfolio__labels">
-                <button className="post-filter-button"
-                    active={filter === "all"}
-                    onClick={() => setFilter("all")}>
+            <div className="portfolio__labels mb-3">
+                <button className={`post-filter-button ${(category === "all") ? 'active' : ''} `}
+                    onClick={() => setCategory("all")}>
                     Alle emner
                 </button>
-                {/* <button className="post-filter-button"
-                    active={filter === "frontend"}
-                    onClick={() => setFilter("frontend")}
-                >
-                    Frontend
-                </button>
-                <button className="post-filter-button"
-                    active={filter === "mobile"}
-                    onClick={() => setFilter("mobile")}
-                >
-                    Mobile
-                </button>
-                <button className="post-filter-button"
-                    active={filter === "ux-ui"}
-                    onClick={() => setFilter("ux-ui")}
-                >
-                    UX/UI
-                </button>
-                <button className="post-filter-button"
-                    active={filter === "others"}
-                    onClick={() => setFilter("others")}
-                >
-                    Others
-                </button> */}
                 {posts.categories.edges.map((q) => {
                     return (
-                        <button className={'post-filter-button' + ' ' + q.node.slug.current}> {q.node.title} </button>
+                        <button 
+                            className={`post-filter-button ${(category === q.node.slug.current) ? 'active' : ''} `} 
+                            onClick={() => setCategory(q.node.slug.current)}> 
+                            {q.node.title} 
+                        </button>
                     )
                 })}
             </div>
-
             <div className="row">
                 <div className="col-md-8">
                     <div className="row py-4 post-list">
-                        {posts.data.edges.map((q, i) => {
+                        {postList.map((q, i) => {
                             if (q.node.mainImage !== null) {
                                 return (
                                     <div className="col-md-6">
@@ -202,7 +151,7 @@ const BlogSection = (data) => {
                     <div className="sidebar">
                         <div className="title">Seneste blogindlæg</div>
                         <ul className="category-list">
-                            {posts.data.edges.map((q) => {
+                            {posts.data.edges.slice(0, 5).map((q) => {
                                 return (
                                     <li className={q.node.slug.current}> <Link to={'blog/' + q.node.slug.current}> {q.node.title} </Link> </li>
                                 )

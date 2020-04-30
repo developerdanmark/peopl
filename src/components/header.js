@@ -1,4 +1,3 @@
-// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
@@ -85,15 +84,15 @@ const Header = ({ siteTitle, navbarWhite }) => {
             })}
             <Link className="py-2 px-5 d-none d-md-inline-block ml-4 btn btn-contact" to="contact">Kontakt</Link>
           </div>
-          <a href="#" class="menu-button d-md-none" onClick={ () => setOpen(!open) } >
+          <Link to="#" class="menu-button d-md-none" onClick={ () => setOpen(!open) } >
             <span></span>
             <span></span>
             <span></span>
-          </a>
+          </Link>
         </div>
       </nav>
         <nav class={open === true ? "menu" : "menu active"}>
-          <a href="#" class="menu-close" onClick={ () => setOpen(!open) } >×</a>
+          <Link to="#" class="menu-close" onClick={ () => setOpen(!open) } >×</Link>
           <ul class="menu-box">
             {data.menus.edges[0].node.routes.map((q, i) => {
               return (

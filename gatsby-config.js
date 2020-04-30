@@ -63,7 +63,7 @@ module.exports = {
             variants: [`500`, `600`,`700`]
           },
           {
-            family: `Work+Sans`,
+            family: `Work Sans`,
             variants: [`200`, `400`,`500`,`600`]
           },
         ],
