@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useStaticQuery } from 'gatsby';
 import Moment from 'react-moment';
+import LazyLoad from 'react-lazyload';
 
 const BlogSection = (data) => {
 
@@ -69,13 +70,13 @@ const BlogSection = (data) => {
 
 
     const result = posts.data.edges
-    .map(item => ({
-        ...item,
-        categories: item.node.categories
-        .filter(child => child.slug.current.includes(category.toLowerCase()))
-    }))
-    .filter(item => item.categories.length > 0)
-    
+        .map(item => ({
+            ...item,
+            categories: item.node.categories
+                .filter(child => child.slug.current.includes(category.toLowerCase()))
+        }))
+        .filter(item => item.categories.length > 0)
+
     const postList = category === "all" ? posts.data.edges : result
 
     return (
@@ -87,10 +88,10 @@ const BlogSection = (data) => {
                 </button>
                 {posts.categories.edges.map((q) => {
                     return (
-                        <button 
-                            className={`post-filter-button ${(category === q.node.slug.current) ? 'active' : ''} `} 
-                            onClick={() => setCategory(q.node.slug.current)}> 
-                            {q.node.title} 
+                        <button
+                            className={`post-filter-button ${(category === q.node.slug.current) ? 'active' : ''} `}
+                            onClick={() => setCategory(q.node.slug.current)}>
+                            {q.node.title}
                         </button>
                     )
                 })}
@@ -104,7 +105,9 @@ const BlogSection = (data) => {
                                     <div className="col-md-6">
                                         <div className="post" key={i}>
                                             <div className="post-image">
-                                                {q.node.mainImage && <img src={q.node.mainImage.asset.fluid.srcWebp} alt={q.node.title} />}
+                                                <LazyLoad>
+                                                    {q.node.mainImage && <img src={q.node.mainImage.asset.fluid.src} alt={q.node.title} />}
+                                                </LazyLoad>
                                             </div>
                                             <div className="post-content">
                                                 {q.node.categories.map((d, i) => { return <div className="tag"> {d.title} </div> })}
@@ -125,7 +128,9 @@ const BlogSection = (data) => {
                                     <div className="col-md-6">
                                         <div className="post dark-bg" key={i}>
                                             <div className="post-image">
-                                                {q.node.mainImage && <img src={q.node.mainImage.asset.fluid.srcWebp} alt={q.node.title} />}
+                                                <LazyLoad>
+                                                    {q.node.mainImage && <img src={q.node.mainImage.asset.fluid.src} alt={q.node.title} />}
+                                                </LazyLoad>
                                             </div>
                                             <div className="post-content">
                                                 {q.node.categories.map((d, i) => { return <div className="tag"> {d.title} </div> })}

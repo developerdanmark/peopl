@@ -83,7 +83,8 @@ exports.createPages = async ({ graphql, actions }) => {
                   title
                   bgImage {
                     asset {
-                      fluid {
+                      fluid(maxWidth: 1500) {
+                        src
                         srcWebp
                       }
                     }
@@ -241,7 +242,7 @@ exports.createPages = async ({ graphql, actions }) => {
                       asset {
                         fluid {
                           srcWebp
-                          srcSet
+                          src
                         }
                       }
                     }
@@ -253,7 +254,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     _rawBody
                     image {
                       asset {
-                        fluid {
+                        fluid(maxWidth: 1500) {
                           src
                           srcWebp
                         }
@@ -279,7 +280,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     _rawBody
                     bgImage {
                       asset {
-                        fluid {
+                        fluid(maxWidth: 1500) {
                           src
                           srcWebp
                         }

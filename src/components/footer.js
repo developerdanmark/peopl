@@ -63,6 +63,7 @@ const Footer = ({ data }) => {
                   _id
                   _type
                   title
+                  key
                   mapLong
                   mapLat
                   zoom
@@ -208,9 +209,10 @@ const Footer = ({ data }) => {
                   let lat = Number(q.node.mapLat)
                   let lng = Number(q.node.mapLong)
                   let zoom = Number(q.node.zoom)
+                  let key = q.node.key
                   return (
                     <>
-                      <SimpleMap key={i} center={ {lat: lat , lng: lng }} zoom={zoom}/>
+                      <SimpleMap key={i} center={ {lat: lat , lng: lng }} zoom={zoom} apiKey={key} />
                     </>
                   )
                 })}

@@ -25,6 +25,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-sanity": "^5.0.6",
+    "gatsby-source-sanity-transform-images": "0.0.6",
     "gatsby-transformer-sharp": "^2.4.3",
     "google-map-react": "^1.1.7",
     "moment": "^2.24.0",

@@ -11,7 +11,7 @@ const BrandSection = (data) => {
                         <LazyLoad>
                             {data.data.brandImages.map((q) => {
                                 return (
-                                    <div className="kunde"><img src={q.asset.fluid.srcWebp} alt={q.title} /></div>
+                                    <div className="kunde"><img src={q.asset.fluid.src} alt={q.title} /></div>
                                 )
                             })}
                         </LazyLoad>

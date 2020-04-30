@@ -1,6 +1,7 @@
 import React from 'react'
 import BlockContent from "@sanity/block-content-to-react"
 import { Link } from "gatsby"
+import LazyLoad from 'react-lazyload'
 
 const ServicesSection = (data) => {
     return (
@@ -23,7 +24,9 @@ const ServicesSection = (data) => {
                                 <div className="col-md-4 p-0">
                                     <div className="icon-card">
                                         <div className="icon-image facebook">
-                                            <img src={q.icon.asset.fluid.srcWebp} alt={q.title} />
+                                            <LazyLoad>
+                                                <img src={q.icon.asset.fluid.src} alt={q.title} />
+                                            </LazyLoad>
                                         </div>
                                         <div className="icon-title">{q.title}</div>
                                         {q._rawBody && <BlockContent blocks={q._rawBody} />}

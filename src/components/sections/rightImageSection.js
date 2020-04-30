@@ -1,6 +1,7 @@
 import React from 'react'
 import BlockContent from "@sanity/block-content-to-react"
 import { Link } from 'gatsby'
+import LazyLoad from 'react-lazyload'
 
 const RightImageSection = (data) => {
     return (
@@ -13,7 +14,9 @@ const RightImageSection = (data) => {
                         {data.data.buttonText && <Link className="btn btn-outline-secondary">{data.data.buttonText}</Link>}
                     </div>
                     <div className="col-md-6 d-flex flex-column justify-content-center">
-                        {data.data.image && <img src={data.data.image.asset.fluid.srcWebp} alt={data.data.title} />}
+                        <LazyLoad>
+                            {data.data.image && <img src={data.data.image.asset.fluid.src} alt={data.data.title} />}
+                        </LazyLoad>
                     </div>
                 </div>
             </div>

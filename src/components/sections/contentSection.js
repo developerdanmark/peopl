@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import BlockContent from "@sanity/block-content-to-react"
 import urlBuilder from "@sanity/image-url";
 import { Link, useStaticQuery } from 'gatsby';
+import LazyLoad from 'react-lazyload';
 
 const urlFor = source => urlBuilder({ projectId: "0ionf5c6", dataset: "production" }).image(source);
 
@@ -41,12 +42,14 @@ const ContentSection = (data) => {
         types: {
             image(props) {
                 return (
-                    <img
-                        src={urlFor(props.node.asset)
-                            .width(600)
-                            .url()}
-                        alt={props.node.alt}
-                    />
+                    <LazyLoad>
+                        <img
+                            src={urlFor(props.node.asset)
+                                .width(600)
+                                .url()}
+                            alt={props.node.alt}
+                        />
+                    </LazyLoad>
                 )
             }
         }

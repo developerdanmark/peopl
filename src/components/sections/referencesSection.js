@@ -21,7 +21,9 @@ const ReferencesSection = (data) => {
                                             </LazyLoad>
                                         </div>
                                         <div class="card-body">
-                                            <div className="kunde"><img src={q.image.asset.fluid.srcWebp} alt={q.title} /></div>
+                                            <LazyLoad>
+                                                <div className="kunde"><img src={q.image.asset.fluid.src} alt={q.title} /></div>
+                                            </LazyLoad>
                                             <h5 class="card-title"> {q.title && q.title} </h5>
                                             {q._rawBody && <BlockContent blocks={q._rawBody} />}
                                         </div>

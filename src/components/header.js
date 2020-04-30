@@ -33,6 +33,29 @@ const Header = ({ siteTitle, navbarWhite }) => {
 
   const data = useStaticQuery(graphql`
     {
+      site: allSanitySiteSettings {
+        edges {
+          node {
+            _id
+            _type
+            logo {
+              asset {
+                fluid(maxWidth: 200) {
+                  ...GatsbySanityImageFluid
+                  src
+                }
+              }
+            }
+            logoDark {
+              asset {
+                fluid(maxWidth: 200) {
+                  ...GatsbySanityImageFluid
+                }
+              }
+            }
+          }
+        }
+      }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 150) {
@@ -71,10 +94,13 @@ const Header = ({ siteTitle, navbarWhite }) => {
       <nav id="navbar" className={`site-header fixed-top py-3 ${navbarWhite ? '' : 'white'}`}>
         <div className="container d-flex flex-row flex-md-row justify-content-between">
           <a className="logo py-2" href="/" aria-label="Product">
-            <Img fluid={data.logo.childImageSharp.fluid} />
+          {/* <code>
+            {JSON.stringify(data.site.edges[0].node.logo)}
+          </code> */}
+            <Img fluid={data.site.edges[0].node.logo.asset.fluid} />
           </a>
           <a className="logodark d-none py-2" href="/" aria-label="Product">
-            <Img fluid={data.logodark.childImageSharp.fluid} />
+            <Img fluid={data.site.edges[0].node.logoDark.asset.fluid} />
           </a>
           <div className="d-flex justify-content-end align-items-center">
             {data.menus.edges[0].node.routes.map((q, i) => {
