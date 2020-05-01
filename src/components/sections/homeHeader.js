@@ -20,28 +20,7 @@ const HomeHeader = ({ data }) => {
           }
         }
       },
-      badge1: file(relativePath: { eq: "badge-1.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      badge2: file(relativePath: { eq: "badge-2.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      badge3: file(relativePath: { eq: "badge-3.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      badge4: file(relativePath: { eq: "badge-4.png" }) {
+      check: file(relativePath: { eq: "paraf.png" }) {
         childImageSharp {
           fluid(maxWidth: 150) {
             ...GatsbyImageSharpFluid
@@ -61,19 +40,19 @@ const HomeHeader = ({ data }) => {
             <div className="col-md-7 mx-auto my-5 d-flex flex-column justify-content-start align-items-start">
               <div className="banner-title">Vi skaber målbare resultater for din forretning</div>
               <div className="text-line">
-                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M40 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z" /></svg>
-                          Gennem personlige relationer, der tager afsæt i dit behov her og nu.
-                        </div>
+                <div className="check"><Img fluid={images.check.childImageSharp.fluid} alt="check" /></div>
+                Gennem personlige relationer, der tager afsæt i dit behov her og nu.
+              </div>
               <div className="text-line">
-                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M40 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z" /></svg>
-                          Specialister og certificeret i SEO og annoncering
-                        </div>
+                <div className="check"><Img fluid={images.check.childImageSharp.fluid} alt="check" /></div>
+                Specialister og certificeret i SEO og annoncering
+              </div>
               <div className="text-line">
-                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M40 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z" /></svg>
-                          Effektiviserer din drift gennem automatisering
-                        </div>
+                <div className="check"><Img fluid={images.check.childImageSharp.fluid} alt="check" /></div>
+                Effektiviserer din drift gennem automatisering
+              </div>
               <div className="logo-block mt-4">
-                <div className="badge"><Img fluid={images.badge.childImageSharp.fluid} /></div>
+                <div className="badge"><Img fluid={images.badge.childImageSharp.fluid} alt="logo" /></div>
               </div>
             </div>
             <div className="col-md-5 d-flex justify-content-center">

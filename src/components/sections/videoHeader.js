@@ -11,7 +11,7 @@ const VideoHeader = (data) => {
             <div className="banner" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover' }}>
                 <div className="container py-5 layer2">
                     <div className="row py-5">
-                        <div className="col-md-6 d-flex justify-content-center align-items-center pl-md-5 py-4 py-md-0 flex-column">
+                        <div className="col-md-6 d-flex justify-content-center align-items-center py-4 py-md-0 flex-column">
                             <div className="w-100">
                                 <div className="tag"> {data.data.tag} </div>
                                 <div className="banner-title">{data.data.title}</div>

@@ -699,6 +699,14 @@ pre tt:after {
   align-items: center;
   height: 800px;
 }
+.banner-content .check {
+  width: 28px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
 @media (min-width: 768px){
   .w-md-75 {
     width: 75%;
@@ -1368,4 +1376,18 @@ footer .map-container iframe {
   text-decoration: none;
   color: #fff;
   font-size: 30px;
+}
+
+.float-phone {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  right: 0;
+  top: 45%;
+  z-index: 553;
+}
+.float-phone a {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
