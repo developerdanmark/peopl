@@ -16,7 +16,7 @@ const LeftImageSection = (data) => {
                     <div className="col-md-6 d-flex flex-column justify-content-center">
                         <div className="content-title">{data.data.title}</div>
                         {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}
-                        {data.data.buttonText && <Link className="btn btn-outline-secondary">{data.data.buttonText}</Link>}
+                        {data.data.buttonText && <Link to={data.data.buttonLink} className="btn btn-outline-secondary">{data.data.buttonText}</Link>}
                     </div>
                 </div>
             </div>
