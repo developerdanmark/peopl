@@ -159,7 +159,7 @@ const Footer = ({ data }) => {
               })}
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className="col-6 col-md-3 mb-5 mb-md-0">
             {footerData.f2.edges.map((q, i) => {
               return (
                 <>
@@ -192,7 +192,7 @@ const Footer = ({ data }) => {
               })}
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className="col-6 col-md-3 mb-5 mb-md-0">
             {footerData.f3.edges.map((q, i) => {
               return (
                 <>

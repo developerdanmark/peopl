@@ -13,6 +13,13 @@ const HomeHeader = ({ data }) => {
             }
         }
       },
+      badge: file(relativePath: { eq: "home-header-logos.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 520) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       badge1: file(relativePath: { eq: "badge-1.png" }) {
         childImageSharp {
           fluid(maxWidth: 150) {
@@ -66,10 +73,7 @@ const HomeHeader = ({ data }) => {
                           Effektiviserer din drift gennem automatisering
                         </div>
               <div className="logo-block mt-4">
-                <div className="badge-1"><Img fluid={images.badge1.childImageSharp.fluid} /></div>
-                <div className="badge-2"><Img fluid={images.badge2.childImageSharp.fluid} /></div>
-                <div className="badge-3"><Img fluid={images.badge3.childImageSharp.fluid} /></div>
-                <div className="badge-4"><Img fluid={images.badge4.childImageSharp.fluid} /></div>
+                <div className="badge"><Img fluid={images.badge.childImageSharp.fluid} /></div>
               </div>
             </div>
             <div className="col-md-5 d-flex justify-content-center">

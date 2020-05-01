@@ -16,7 +16,6 @@ const VideoSection = (data) => {
 
                                 <div className="video-block-content mx-auto">
                                     <div class="embed-responsive embed-responsive-16by9">
-
                                         <iframe class="embed-responsive-item" title="245% stigning fra SEO" src={embedUrl} allowfullscreen></iframe>
                                     </div>
                                     <div className="video-title">

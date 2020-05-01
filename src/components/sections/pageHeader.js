@@ -50,7 +50,7 @@ const PageHeader = ({ data }) => {
       {/* <div className="banner-bg"><Img fluid={images.bg.childImageSharp.fluid} /></div> */}
       <div className="container">
         <div className="row banner-content">
-          <div className="col-md-7 mx-auto my-5 d-flex flex-column justify-content-start align-items-start">
+          <div className="col-md-7 mx-auto my-5 py-4 py-md-0 d-flex flex-column justify-content-start align-items-start">
             <div className="tag"> {data.tag} </div>
             <LazyLoad>
               <div className="banner-title"> <img src={data.icon.asset.fluid.src} alt={data.title} /> {data.title} </div>

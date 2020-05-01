@@ -706,7 +706,7 @@ pre tt:after {
 }
 .blog-banner {
   /* height: 700px; */
-  padding-top: 96px;
+  padding-top: 104px;
   background: #F3F5F5;
 }
 .blog-banner img {
@@ -914,6 +914,16 @@ pre tt:after {
   justify-content: center;
 }
 
+.banner .logo-block .badge {
+  width: 520px;
+  height: auto;
+  margin: 0 10px;
+}
+@media (max-width: 767px) {
+  .banner .logo-block .badge {
+    width: 350px;
+  }
+}
 .banner .logo-block .badge-1 {
   width: 90px;
   height: 90px;

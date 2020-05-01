@@ -16,7 +16,8 @@ import {
     TitleSection,
     Space,
     BlogSection,
-    ContentSection
+    ContentSection,
+    VideoHeader
 } from "../components/sections"
 
 const page = ({ pageContext = {} }) => {
@@ -92,6 +93,10 @@ const page = ({ pageContext = {} }) => {
                         case 'contentSection':
                             return (
                                 <ContentSection key={i} data={section} />
+                            )
+                        case 'videoHeader':
+                            return (
+                                <VideoHeader key={i} data={section} />
                             )
                         default:
                             return(<div>...{JSON.stringify(section._type)}</div>)

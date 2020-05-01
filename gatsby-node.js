@@ -299,6 +299,25 @@ exports.createPages = async ({ graphql, actions }) => {
                       }
                     }
                   }
+                  ... on SanityVideoHeader {
+                    _key
+                    _type
+                    _rawBody
+                    title
+                    tag
+                    videoId
+                    buttonText
+                    buttonLink
+                    bgImage {
+                      asset {
+                        fluid(maxWidth: 1500) {
+                          src
+                          srcWebp
+                        }
+                      }
+                    }
+                  }
+
 
               }
             }

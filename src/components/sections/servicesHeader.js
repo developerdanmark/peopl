@@ -9,7 +9,7 @@ const ServicesHeader = (data) => {
             <div className="blog-banner">
                 <div className="container-fluid layer2">
                     <div className="row">
-                        <div className="col-md-7 d-flex justify-content-center align-items-center px-md-5 flex-column">
+                        <div className="col-md-7 d-flex justify-content-center align-items-center px-md-5 py-4 py-md-0 flex-column">
                             <div className="w-md-75">
                                 <div className="tag"> {data.data.tag} </div>
                                 <div className="banner-title">{data.data.title}</div>

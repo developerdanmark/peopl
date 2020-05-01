@@ -8,7 +8,7 @@ const BlogHeader = (data) => {
             <div className="blog-banner">
                 <div className="container-fluid layer2">
                     <div className="row">
-                        <div className="col-md-7 d-flex justify-content-center align-items-center flex-column">
+                        <div className="col-md-7 d-flex justify-content-center align-items-center py-4 py-md-0 flex-column">
                             <div className="w-md-75">
                                 <div className="tag"> {data.data.tag} </div>
                                 <div className="banner-title">{data.data.title}</div>
