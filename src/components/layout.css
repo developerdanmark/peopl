@@ -647,6 +647,9 @@ pre tt:after {
   background: #fff;
   box-shadow: 1px 3px 5px rgba(0,0,0,.1);
 }
+.site-header.white {
+  background: #ffffff;
+}
 .site-header.white a,
 .site-header.sticky a{
   color: #153243;
@@ -696,7 +699,11 @@ pre tt:after {
   align-items: center;
   height: 800px;
 }
-
+@media (min-width: 768px){
+  .w-md-75 {
+    width: 75%;
+  }
+}
 .blog-banner {
   /* height: 700px; */
   padding-top: 96px;
@@ -704,6 +711,7 @@ pre tt:after {
 }
 .blog-banner img {
   margin-bottom: 0;
+  width: 660px;
 } 
 .blog-banner .layer1 {
   position: absolute;
@@ -1304,6 +1312,9 @@ footer .map-container iframe {
   display: inline-block;
   padding: 10px 0;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .menu-button span {
   display: block;

@@ -47,8 +47,8 @@ const HomeHeader = ({ data }) => {
   return (
     <LazyLoad>
 
-      <div className="position-relative banner py-5 overflow-hidden bg-light" style={{ background: `url(${bg})`, backgroundSize: 'cover' }}>
-        {/* <div className="banner-bg"><Img fluid={images.bg.childImageSharp.fluid} /></div> */}
+      <div className="position-relative banner py-5 overflow-hidden bg-light" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover' }}>
+        {/* <div className="banner-bg"><img src={images.bg.childImageSharp.fluid.base64} /></div> */}
         <div className="container">
           <div className="row banner-content">
             <div className="col-md-7 mx-auto my-5 d-none d-md-flex flex-column justify-content-start align-items-start">

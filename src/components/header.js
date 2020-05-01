@@ -91,7 +91,7 @@ const Header = ({ siteTitle, navbarWhite }) => {
   `)
   return (
     <>
-      <nav id="navbar" className={`site-header fixed-top py-3 ${navbarWhite ? '' : 'white'}`}>
+      <nav id="navbar" className={`site-header fixed-top py-1 py-md-4 ${navbarWhite ? '' : 'white'}`}>
         <div className="container d-flex flex-row flex-md-row justify-content-between">
           <a className="logo py-2" href="/" aria-label="Product">
           {/* <code>

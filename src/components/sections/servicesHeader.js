@@ -7,14 +7,16 @@ const ServicesHeader = (data) => {
     return (
         <>
             <div className="blog-banner">
-                <div className="container layer2">
+                <div className="container-fluid layer2">
                     <div className="row">
-                        <div className="col-md-6 d-flex justify-content-center align-items-start flex-column">
-                            <div className="banner-title">{data.data.title}</div>
-                            {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}
-                            <Link className="btn btn-peopl">Vil du høre mere?</Link>
+                        <div className="col-md-7 d-flex justify-content-center align-items-center px-md-5 flex-column">
+                            <div className="w-md-75">
+                                <div className="banner-title">{data.data.title}</div>
+                                {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}
+                                <Link className="btn btn-peopl">Vil du høre mere?</Link>
+                            </div>
                         </div>
-                        <div className="col-md-6 d-flex justify-content-center align-items-end flex-column">
+                        <div className="col-md-5 d-flex justify-content-center align-items-end pr-md-0 flex-column">
                             <LazyLoad>
                                 <img src={data.data.image.asset.fluid.src} alt={data.data.title} />
                             </LazyLoad>

@@ -86,6 +86,7 @@ exports.createPages = async ({ graphql, actions }) => {
                       fluid(maxWidth: 1500) {
                         src
                         srcWebp
+                        base64
                       }
                     }
                   }
