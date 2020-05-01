@@ -1404,3 +1404,12 @@ footer .map-container iframe {
   height: 100%;
   display: block;
 }
+
+.btn-outline-secondary {
+  color: #153243;
+  border: 1px solid #153243;
+}
+.btn-outline-secondary:hover {
+  color: #153243;
+  background: #F3F5F5;
+}
