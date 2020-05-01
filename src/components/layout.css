@@ -720,7 +720,12 @@ pre tt:after {
 .blog-banner .layer2 {
   height: 100%;
 }
-
+.blog-banner .tag {
+  color: #E59385;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
 .blog-banner .banner-title {
   font-size: 46px;
   line-height: 58px;
@@ -969,6 +974,17 @@ pre tt:after {
   color: #fff;
   height: 50px;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .banner-content {
+    height: 1200px;
+  }
+  .banner .banner-title {
+    width: 100%;
+    font-size: 40px;
+    line-height: 53px;
+  }
 }
 
 .btn-peopl {

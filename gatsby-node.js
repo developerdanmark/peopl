@@ -186,6 +186,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     _key
                     _type
                     title
+                    tag
                     _rawBody
                     image {
                       asset {
@@ -222,6 +223,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     _key
                     _type
                     title
+                    tag
                     _rawBody
                     image {
                       asset {
@@ -252,6 +254,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     _key
                     _type
                     title
+                    tag
                     _rawBody
                     image {
                       asset {

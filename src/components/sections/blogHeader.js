@@ -10,6 +10,7 @@ const BlogHeader = (data) => {
                     <div className="row">
                         <div className="col-md-7 d-flex justify-content-center align-items-center flex-column">
                             <div className="w-md-75">
+                                <div className="tag"> {data.data.tag} </div>
                                 <div className="banner-title">{data.data.title}</div>
                                 {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}
                                 <div className="form-row inline-from w-100 py-5 pr-5">

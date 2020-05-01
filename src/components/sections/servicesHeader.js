@@ -11,6 +11,7 @@ const ServicesHeader = (data) => {
                     <div className="row">
                         <div className="col-md-7 d-flex justify-content-center align-items-center px-md-5 flex-column">
                             <div className="w-md-75">
+                                <div className="tag"> {data.data.tag} </div>
                                 <div className="banner-title">{data.data.title}</div>
                                 {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}
                                 <Link className="btn btn-peopl">Vil du høre mere?</Link>

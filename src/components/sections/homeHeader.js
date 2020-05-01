@@ -51,7 +51,7 @@ const HomeHeader = ({ data }) => {
         {/* <div className="banner-bg"><img src={images.bg.childImageSharp.fluid.base64} /></div> */}
         <div className="container">
           <div className="row banner-content">
-            <div className="col-md-7 mx-auto my-5 d-none d-md-flex flex-column justify-content-start align-items-start">
+            <div className="col-md-7 mx-auto my-5 d-flex flex-column justify-content-start align-items-start">
               <div className="banner-title">Vi skaber målbare resultater for din forretning</div>
               <div className="text-line">
                 <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M40 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z" /></svg>
