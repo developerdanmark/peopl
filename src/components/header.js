@@ -89,8 +89,13 @@ const Header = ({ siteTitle, navbarWhite }) => {
 
     }
   `)
-  var path = window.location.pathname;
-  var page = path.split("/").pop();
+
+  const [ page, setPage ] = useState([])
+  useEffect(() => {   
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    setPage(page);
+  }, [])
   return (
     <>
       <nav id="navbar" className={`site-header fixed-top py-1 py-md-4 ${navbarWhite ? '' : 'white'}`}>
