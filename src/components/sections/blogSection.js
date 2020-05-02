@@ -115,7 +115,7 @@ const BlogSection = (data) => {
                                                 {/* {JSON.stringify(q.node)} */}
                                                 <p className="post-excerpt"> {q.node.excerpt} </p>
                                                 {/* {q.node._rawBody && <BlockContent blocks={q.node._rawBody} />} */}
-                                                <Link to={'blog/' + q.node.slug.current} className="post-link">&nbsp;</Link>
+                                                <Link to={'viden/' + q.node.categories[0].slug.current +'/' + q.node.slug.current} className="post-link">&nbsp;</Link>
                                                 <span className="post-date">
                                                     <Moment format="D. MMM YYYY" >{q.node.publishedAt}</Moment>
                                                 </span>
@@ -137,7 +137,7 @@ const BlogSection = (data) => {
                                                 <div className="post-title"> {q.node.title} </div>
                                                 <p className="post-excerpt"> {q.node.excerpt} </p>
                                                 {/* {q.node._rawBody && <BlockContent blocks={q.node._rawBody} />} */}
-                                                <Link to={'blog/' + q.node.slug.current} className="post-link">&nbsp;</Link>
+                                                <Link to={'viden/' + q.node.categories[0].slug.current +'/' +  q.node.slug.current} className="post-link">&nbsp;</Link>
                                                 <span className="post-date">
                                                     <Moment format="D. MMM YYYY" >{q.node.publishedAt}</Moment>
                                                 </span>

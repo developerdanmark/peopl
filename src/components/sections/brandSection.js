@@ -6,7 +6,7 @@ const BrandSection = (data) => {
         <>
             {/* ########### Brands block ########### */}
             <div className="logo-block-full">
-                <div className="container">
+                <div className="container brand-block">
                     <div className="logos mx-auto">
                         <LazyLoad>
                             {data.data.brandImages.map((q) => {

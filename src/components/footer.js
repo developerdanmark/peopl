@@ -152,7 +152,7 @@ const Footer = ({ data }) => {
       <footer>
         <div className="container py-5">
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-6 col-md-3 order-1">
               <h5> {footerData.f1.edges.map((q, i) => {
                 return (q.node.title)
               })} </h5>
@@ -169,11 +169,11 @@ const Footer = ({ data }) => {
                 })}
               </ul>
             </div>
-            <div className="col-6 col-md-3 mb-5 mb-md-0 d-flex flex-nowrap flex-column">
+            <div className="col-6 col-md-3 mb-5 mb-md-0 d-flex flex-nowrap flex-column order-2">
               <div className="order-2 order-md-1">
-                <h5>{footerData.f2.edges[0].node.title}</h5>
+                <h5 className="d-none d-md-block">{footerData.f2.edges[0].node.title}</h5>
                 {/* {JSON.stringify(footerData.f2.edges[0].node.social)} */}
-                <div className="social-icons">
+                <div className="social-icons d-none d-md-block">
                   {footerData.f2.edges[0].node.social.map((q, i) => {
                     return (
                       <a href={q.link} target="_blank" rel="noopener noreferrer">
@@ -197,7 +197,7 @@ const Footer = ({ data }) => {
                 })}
               </ul>
             </div>
-            <div className="col-6 col-md-3 mb-5 mb-md-0">
+            <div className="col-6 col-md-3 mb-md-0 order-3">
               {footerData.f3.edges.map((q, i) => {
                 return (
                   <>
@@ -206,8 +206,18 @@ const Footer = ({ data }) => {
                   </>
                 )
               })}
+              <h5 className="d-block d-md-none">{footerData.f2.edges[0].node.title}</h5>
+              <div className="social-icons d-flex d-md-none">
+                {footerData.f2.edges[0].node.social.map((q, i) => {
+                  return (
+                    <a href={q.link} target="_blank" rel="noopener noreferrer">
+                      <Img fluid={q.icon.asset.fluid} alt={q.title} className="social-icon" />
+                    </a>
+                  )
+                })}
+              </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 order-5 order-md-4">
               <div id="map-container-google-1" class="z-depth-1-half map-container">
                 <LazyLoad>
                   {footerData.f4.edges.map((q, i) => {
@@ -226,7 +236,7 @@ const Footer = ({ data }) => {
               </div>
 
             </div>
-            <div className="col-md-12">
+            <div className="col-md-12 order-4 order-md-5">
               <div className="logo-block mt-4">
                 <Image />
               </div>

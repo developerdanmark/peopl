@@ -357,7 +357,8 @@ exports.createPages = async ({ graphql, actions }) => {
     const posts = result.data.allSanityPost.edges || []
     const categories = result.data.allSanityCategory.edges || []
     posts.forEach((edge, index) => {
-      const path = `/blog/${edge.node.slug.current}`
+      const cat = edge.node.categories[0].slug.current
+      const path = `/viden/${cat}/${edge.node.slug.current}`
       createPage({
         path,
         component: require.resolve("./src/templates/blog-post.js"),

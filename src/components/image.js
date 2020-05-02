@@ -28,9 +28,7 @@ const Image = () => {
 
   // return <Img fluid={data.logo.childImageSharp.fluid} />
   return (
-    <div className="logo-block mt-4">
       <div className="footerbadges"><Img fluid={images.footerbadges.childImageSharp.fluid} /></div>
-    </div>
   )
 }
 
