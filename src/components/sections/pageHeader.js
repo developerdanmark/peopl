@@ -46,7 +46,7 @@ const PageHeader = ({ data }) => {
   `)
   const bg = data.bgImage.asset.fluid.src
   return (
-    <div className="position-relative banner py-5 overflow-hidden bg-light" style={{ background: `url(${bg})`, backgroundSize: 'cover' }}>
+    <div className="position-relative banner overflow-hidden bg-light" style={{ background: `url(${bg})`, backgroundSize: 'cover' }}>
       <div className="container">
           <div className="breadcrumb mt-4"><Link to="/" >Forside</Link> >&nbsp; <Link to="/ydelser">Ydelser</Link> >&nbsp; {data.title}  </div>
         <div className="row banner-content">

@@ -32,7 +32,7 @@ const HomeHeader = ({ data }) => {
   const bg = data.bgImage.asset.fluid.src
   return (
     <LazyLoad>
-      <div className="position-relative banner py-5 overflow-hidden bg-light" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover' }}>
+      <div className="position-relative banner overflow-hidden bg-light" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover' }}>
         {/* <div className="banner-bg"><img src={images.bg.childImageSharp.fluid.base64} /></div> */}
         <div className="container">
           <div className="row banner-content">
