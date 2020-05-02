@@ -922,8 +922,21 @@ pre tt:after {
   display: flex;
   justify-content: flex-start;
 }
-.banner .banner-title img {
+.banner .banner-title .title-icon {
+  background: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 35px;
+}
+
+.banner .banner-title img {
+  margin: 0;
+  height: 60%;
+  width: auto;
 }
 .banner .text-line {
   position: relative;

@@ -53,7 +53,10 @@ const PageHeader = ({ data }) => {
           <div className="col-md-7 mx-auto my-5 py-4 py-md-0 d-flex flex-column justify-content-start align-items-start">
             <div className="tag"> {data.tag} </div>
             <LazyLoad>
-              <div className="banner-title"> <img src={data.icon.asset.fluid.src} alt={data.title} /> {data.title} </div>
+              <div className="banner-title"> 
+                <div className="title-icon"> <img src={data.icon.asset.fluid.src} alt={data.title} /> </div>
+                {data.title}
+              </div>
             </LazyLoad>
             <div className="banner-body">
               {data._rawBody && <BlockContent blocks={data._rawBody} />}
