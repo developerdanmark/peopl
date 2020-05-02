@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import BlockContent from "@sanity/block-content-to-react"
 import LazyLoad from "react-lazyload"
@@ -47,8 +47,8 @@ const PageHeader = ({ data }) => {
   const bg = data.bgImage.asset.fluid.src
   return (
     <div className="position-relative banner py-5 overflow-hidden bg-light" style={{ background: `url(${bg})`, backgroundSize: 'cover' }}>
-      {/* <div className="banner-bg"><Img fluid={images.bg.childImageSharp.fluid} /></div> */}
       <div className="container">
+          <div className="breadcrumb"><Link to="/" >Forside</Link> >&nbsp; <Link to="/ydelser">Ydelser</Link> >&nbsp; {data.title}  </div>
         <div className="row banner-content">
           <div className="col-md-7 mx-auto my-5 py-4 py-md-0 d-flex flex-column justify-content-start align-items-start">
             <div className="tag"> {data.tag} </div>

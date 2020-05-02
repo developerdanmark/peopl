@@ -643,6 +643,13 @@ pre tt:after {
   text-decoration: none;
   font-size: 16px;
 }
+.site-header .menu-link {
+  margin: 0 5px;
+}
+.site-header a.active {
+  font-weight: bold;
+  border-bottom: 1px solid #153243;
+}
 .site-header.sticky {
   background: #fff;
   box-shadow: 1px 3px 5px rgba(0,0,0,.1);
@@ -893,6 +900,19 @@ pre tt:after {
 .btn-contact:focus {
   box-shadow: none;
 }
+.banner .breadcrumb {
+  position: absolute;
+  top:100px;
+  background: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0;
+}
+.banner .breadcrumb a {
+  margin-right: 5px;
+  color: #fff;
+  font-weight: normal;
+}
 .banner .banner-title {
   width: 667px;
   font-size: 46px;
@@ -932,14 +952,14 @@ pre tt:after {
   justify-content: center;
 }
 
-.banner .logo-block .badge .gatsby-image-wrapper img {
+/* .banner .logo-block .badge .gatsby-image-wrapper img {
   object-fit: contain !important;
-}
-.banner .logo-block .badge {
+} */
+/* .banner .logo-block .badge {
   width: 530px;
   height: auto;
   margin: 0 10px;
-}
+} */
 @media (max-width: 767px) {
   .banner .logo-block .badge {
     width: 350px;
@@ -1409,7 +1429,13 @@ footer .map-container iframe {
   color: #153243;
   border: 1px solid #153243;
 }
-.btn-outline-secondary:hover {
-  color: #153243;
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active {
+  color: #153243 !important;
   background: #F3F5F5;
+  outline: none;
+  box-shadow: none !important;
+  background-color: #F3F5F5 !important;
+  border-color: #153243 !important;
 }

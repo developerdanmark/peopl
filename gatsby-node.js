@@ -81,12 +81,23 @@ exports.createPages = async ({ graphql, actions }) => {
                   _key
                   _type
                   title
+                  list1
+                  list2
+                  list3
                   bgImage {
                     asset {
                       fluid(maxWidth: 1500) {
                         src
                         srcWebp
                         base64
+                      }
+                    }
+                  }
+                  badge {
+                    asset {
+                      fluid(maxWidth: 600) {
+                        src
+                        srcWebp
                       }
                     }
                   }

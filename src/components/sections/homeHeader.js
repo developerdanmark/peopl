@@ -32,27 +32,26 @@ const HomeHeader = ({ data }) => {
   const bg = data.bgImage.asset.fluid.src
   return (
     <LazyLoad>
-
       <div className="position-relative banner py-5 overflow-hidden bg-light" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover' }}>
         {/* <div className="banner-bg"><img src={images.bg.childImageSharp.fluid.base64} /></div> */}
         <div className="container">
           <div className="row banner-content">
             <div className="col-md-7 mx-auto my-5 d-flex flex-column justify-content-start align-items-start">
-              <div className="banner-title">Vi skaber målbare resultater for din forretning</div>
+              <div className="banner-title">{data.title}</div>
               <div className="text-line">
                 <div className="check"><Img fluid={images.check.childImageSharp.fluid} alt="check" /></div>
-                Gennem personlige relationer, der tager afsæt i dit behov her og nu.
+                {data.list1}
               </div>
               <div className="text-line">
                 <div className="check"><Img fluid={images.check.childImageSharp.fluid} alt="check" /></div>
-                Specialister og certificeret i SEO og annoncering
+                {data.list2}
               </div>
               <div className="text-line">
                 <div className="check"><Img fluid={images.check.childImageSharp.fluid} alt="check" /></div>
-                Effektiviserer din drift gennem automatisering
+                {data.list3}
               </div>
               <div className="logo-block mt-4">
-                <div className="badge"><Img fluid={images.badge.childImageSharp.fluid} alt="logo" /></div>
+                <div className="badge"><img src={data.badge.asset.fluid.src} alt="badge" /></div>
               </div>
             </div>
             <div className="col-md-5 d-flex justify-content-center">

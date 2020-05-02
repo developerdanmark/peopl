@@ -89,14 +89,13 @@ const Header = ({ siteTitle, navbarWhite }) => {
 
     }
   `)
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
   return (
     <>
       <nav id="navbar" className={`site-header fixed-top py-1 py-md-4 ${navbarWhite ? '' : 'white'}`}>
         <div className="container d-flex flex-row flex-md-row justify-content-between">
           <a className="logo py-2" href="/" aria-label="Product">
-          {/* <code>
-            {JSON.stringify(data.site.edges[0].node.logo)}
-          </code> */}
             <Img fluid={data.site.edges[0].node.logo.asset.fluid} />
           </a>
           <a className="logodark d-none py-2" href="/" aria-label="Product">
@@ -105,7 +104,11 @@ const Header = ({ siteTitle, navbarWhite }) => {
           <div className="d-flex justify-content-end align-items-center">
             {data.menus.edges[0].node.routes.map((q, i) => {
               return (
-                <Link key={i} className="py-2 px-4 d-none d-md-inline-block" to={q.routes && q.routes.slug.current} > {q.title} </Link>
+                <Link key={i} 
+                  className={`py-2 px-4 d-none d-md-inline-block menu-link ${(q.routes.slug.current === page) ? 'active' : ''}`} 
+                  to={q.routes && q.routes.slug.current} > 
+                  {q.title} 
+                </Link>
               )
             })}
             <Link className="py-2 px-5 d-none d-md-inline-block ml-4 btn btn-contact" to="contact">Kontakt</Link>

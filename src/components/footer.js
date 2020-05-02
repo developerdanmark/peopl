@@ -159,10 +159,10 @@ const Footer = ({ data }) => {
               })}
             </ul>
           </div>
-          <div className="col-6 col-md-3 mb-5 mb-md-0">
+          <div className="col-6 col-md-3 mb-5 mb-md-0 d-flex flex-nowrap flex-column">
             {footerData.f2.edges.map((q, i) => {
               return (
-                <>
+                <div className="order-2 order-md-1">
                   <h5>{q.node.title}</h5>
                   <div className="social-icons">
                     <a href={q.node.linkedin} target="_blank" rel="noopener noreferrer">
@@ -175,11 +175,11 @@ const Footer = ({ data }) => {
                       <Img fluid={footerData.instagramIcon.childImageSharp.fluid} className="instagram-icon" />
                     </a>
                   </div>
-                </>
+                </div>
               )
             })}
 
-            <ul className="list-unstyled text-small">
+            <ul className="list-unstyled text-small order-1 order-md-2">
               <li><a className="text-muted" href="/sitemap.xml" target="_blank" rel="noopener noreferrer" >Sitemap</a></li>
               {footerData.f2.edges.map((q, i) => {
                 return (
