@@ -58,10 +58,10 @@ const HomeHeader = ({ data }) => {
               <div className="banner-form">
                 <div className="form-title">
                   Skal vi også vækste <br /> din virksomhed?
-                            </div>
+                  </div>
                 <div className="form-subtitle">
                   Lad os invitere dig ind til et <br /> uforpligtende møde
-                            </div>
+                  </div>
                 <div className="form-group">
                   <label htmlFor="name">Navn</label>
                   <input type="text" className="form-control" id="name" name="name" />
