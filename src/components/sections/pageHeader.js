@@ -50,7 +50,7 @@ const PageHeader = ({ data }) => {
       <div className="container">
           <div className="breadcrumb mt-4"><Link to="/" >Forside</Link> >&nbsp; <Link to="/ydelser">Ydelser</Link> >&nbsp; {data.title}  </div>
         <div className="row banner-content">
-          <div className="col-md-7 mx-auto my-5 py-4 py-md-0 d-flex flex-column justify-content-start align-items-start">
+          <div className="col-xl-7 col-lg-6 mx-auto my-5 py-4 py-md-0 d-flex flex-column justify-content-start align-items-start">
             <div className="tag"> {data.tag} </div>
             <LazyLoad>
               <div className="banner-title"> 
@@ -68,7 +68,7 @@ const PageHeader = ({ data }) => {
               <div className="badge-4"><Img fluid={images.badge4.childImageSharp.fluid} /></div>
             </div>
           </div>
-          <div className="col-md-5 d-flex justify-content-center">
+          <div className="col-xl-5 col-lg-6 d-flex justify-content-center">
             <div className="banner-form">
               <div className="form-title">
                 Skal vi også vækste <br /> din virksomhed?

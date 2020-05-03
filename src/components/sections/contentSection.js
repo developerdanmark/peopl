@@ -65,11 +65,11 @@ const ContentSection = (data) => {
     return (
         <div className="container py-5 single-page">
             <div className="row py-5">
-                <div className="col-md-8 content">
+                <div className="col-lg-8 content">
                     <h1> {data.data.title} </h1>
                     {data.data._rawBody && <BlockContent serializers={serializer} blocks={data.data._rawBody} />}
                 </div>
-                <div className="col-md-4">
+                <div className="col-lg-4">
                     <div className="sidebar">
                         {/* <div id="demo" className="headings"></div> */}
                         <div className="title">Seneste blogindlæg</div>
