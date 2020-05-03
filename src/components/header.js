@@ -110,23 +110,23 @@ const Header = ({ siteTitle, navbarWhite }) => {
             {data.menus.edges[0].node.routes.map((q, i) => {
               return (
                 <Link key={i} 
-                  className={`py-2 px-4 d-none d-md-inline-block menu-link ${(q.routes.slug.current === page) ? 'active' : ''}`} 
+                  className={`py-2 px-4 d-none d-xl-inline-block menu-link ${(q.routes.slug.current === page) ? 'active' : ''}`} 
                   to={q.routes && q.routes.slug.current} > 
                   {q.title} 
                 </Link>
               )
             })}
-            <Link className="py-2 px-5 d-none d-md-inline-block ml-4 btn btn-contact" to="contact">Kontakt</Link>
+            <Link className="py-2 px-5 d-none d-xl-inline-block ml-4 btn btn-contact" to="contact">Kontakt</Link>
           </div>
-          <Link to="#" class="menu-button d-md-none" onClick={ () => setOpen(!open) } >
+          <button class="menu-button d-xl-none" onClick={ () => setOpen(!open) } >
             <span></span>
             <span></span>
             <span></span>
-          </Link>
+          </button>
         </div>
       </nav>
         <nav class={open === true ? "menu" : "menu active"}>
-          <Link to="#" class="menu-close" onClick={ () => setOpen(!open) } >×</Link>
+          <button class="menu-close" onClick={ () => setOpen(!open) } >×</button>
           <ul class="menu-box">
             {data.menus.edges[0].node.routes.map((q, i) => {
               return (

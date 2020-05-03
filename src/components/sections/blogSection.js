@@ -97,7 +97,7 @@ const BlogSection = (data) => {
                 })}
             </div>
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-lg-8">
                     <div className="row py-4 post-list">
                         {postList.map((q, i) => {
                             if (q.node.mainImage !== null) {
@@ -152,7 +152,7 @@ const BlogSection = (data) => {
                         )} */}
                     </div>
                 </div>
-                <div className="col-md-4 py-4">
+                <div className="col-lg-4 py-4">
                     <div className="sidebar">
                         <div className="title">Seneste blogindlæg</div>
                         <ul className="category-list">

@@ -6,14 +6,14 @@ const BlogHeader = (data) => {
     return (
         <>
             <div className="blog-banner">
-                <div className="layer1">
+                <div className="layer1 mb-5 mb-md-0">
                     <LazyLoad>
                         <img src={data.data.image.asset.fluid.src} alt={data.data.title} />
                     </LazyLoad>
                 </div>
                 <div className="container layer2 d-flex justify-content-center align-items-start flex-column">
                     <div className="row">
-                        <div className="col-md-7 d-flex flex-column">
+                        <div className="col-12 col-xl-7 d-flex flex-column">
                             <div className="tag"> {data.data.tag} </div>
                             <div className="banner-title">{data.data.title}</div>
                             {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}

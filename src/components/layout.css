@@ -737,9 +737,14 @@ pre tt:after {
   display: flex;
   justify-content: flex-end;
 }
-@media (min-width: 768px) {
+@media (min-width: 1140px) {
   .blog-banner .layer1 {
     position: absolute;
+  }
+}
+@media (max-width: 1140px) {
+  .blog-banner .layer1 img {
+    margin: 0 auto;
   }
 }
 .blog-banner .layer2 {
@@ -914,7 +919,7 @@ pre tt:after {
   font-weight: normal;
 }
 .banner .banner-title {
-  width: 667px;
+  max-width: 667px;
   font-size: 46px;
   line-height: 58px;
   font-weight: bold;
@@ -1040,9 +1045,9 @@ pre tt:after {
   width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 960px) {
   .banner-content {
-    height: 1200px;
+    height: 1300px;
   }
   .banner .banner-title {
     width: 100%;
@@ -1064,8 +1069,10 @@ pre tt:after {
   background: #f3f5f5;
   height: 120px;
 }
-.logo-block-full .brand-block {
-  overflow-x: scroll;
+@media (max-width: 1140px) {
+  .logo-block-full .brand-block {
+    overflow-x: scroll;
+  }
 }
 .logo-block-full .logos {
   display: flex;
@@ -1340,9 +1347,14 @@ footer .map-container iframe {
   height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1140px) {
+  footer .col-map {
+    height: 300px;
+  }
+  footer .map-container {
+    width: 100%;
+  }
   footer .logo-block {
-    /* margin-top: -60px !important; */
     margin-bottom: 80px;
   }
 }
@@ -1377,7 +1389,7 @@ footer .map-container iframe {
   height: 100%;
   background-color: rgba(0, 0, 0, .95);
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1100;
@@ -1396,6 +1408,8 @@ footer .map-container iframe {
   text-decoration: none;
   font-size: 50px;
   font-weight: 800;
+  background: none;
+  border: none;
 }
 .menu-button {
   display: inline-block;
@@ -1404,6 +1418,8 @@ footer .map-container iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: none;
+  border: none;
 }
 .menu-button span {
   display: block;
@@ -1446,7 +1462,12 @@ footer .map-container iframe {
   height: 100%;
   display: block;
 }
-
+@media (max-width: 768px) {
+  .float-phone {
+    width: 53px;
+    height: 53px;
+  }
+}
 .btn-outline-secondary {
   color: #153243;
   border: 1px solid #153243;

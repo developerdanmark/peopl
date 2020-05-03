@@ -217,7 +217,7 @@ const Footer = ({ data }) => {
                 })}
               </div>
             </div>
-            <div className="col-md-3 order-5 order-md-4">
+            <div className="col-12 col-xl-3 order-5 order-xl-4 col-map">
               <div id="map-container-google-1" class="z-depth-1-half map-container">
                 <LazyLoad>
                   {footerData.f4.edges.map((q, i) => {
@@ -236,7 +236,7 @@ const Footer = ({ data }) => {
               </div>
 
             </div>
-            <div className="col-md-12 order-4 order-md-5">
+            <div className="col-md-12 order-4 order-xl-5">
               <div className="logo-block mt-4">
                 <Image />
               </div>

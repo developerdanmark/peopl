@@ -36,7 +36,7 @@ const HomeHeader = ({ data }) => {
         {/* <div className="banner-bg"><img src={images.bg.childImageSharp.fluid.base64} /></div> */}
         <div className="container">
           <div className="row banner-content">
-            <div className="col-md-7 mx-auto my-5 d-flex flex-column justify-content-start align-items-start">
+            <div className="col-xl-7 col-lg-6 mx-auto my-5 d-flex flex-column justify-content-start align-items-start">
               <div className="banner-title">{data.title}</div>
               <div className="text-line">
                 <div className="check"><Img fluid={images.check.childImageSharp.fluid} alt="check" /></div>
@@ -54,7 +54,7 @@ const HomeHeader = ({ data }) => {
                 <div className="badge"><img src={data.badge.asset.fluid.src} alt="badge" /></div>
               </div>
             </div>
-            <div className="col-md-5 d-flex justify-content-center">
+            <div className="col-xl-5 col-lg-6 d-flex justify-content-center">
               <div className="banner-form">
                 <div className="form-title">
                   Skal vi også vækste <br /> din virksomhed?

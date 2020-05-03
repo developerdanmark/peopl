@@ -31,7 +31,7 @@ const blogPost = ({ pageContext = {} }) => {
             <div className="post-page">
                 <div className="container">
                     <div className="row pb-5">
-                        <div className="col-md-8 pb-5">
+                        <div className="col-lg-8 pb-5">
                             {pageContext.post.categories.map((q, i) => {
                                 return (
                                     <div className="tag"> {q.slug.current} </div>
@@ -46,7 +46,7 @@ const blogPost = ({ pageContext = {} }) => {
                             </div>
                             {pageContext.post._rawBody && <BlockContent serializers={serializer} blocks={pageContext.post._rawBody} />}
                         </div>
-                        <div className="col-md-4 py-5">
+                        <div className="col-lg-4 py-5">
                             <div className="sidebar py-5">
                                 <div className="title">Seneste blogindlæg</div>
                                 {/* <code>

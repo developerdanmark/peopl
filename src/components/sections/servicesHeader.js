@@ -14,7 +14,7 @@ const ServicesHeader = (data) => {
                 </div>
                 <div className="container layer2 d-flex justify-content-center align-items-start flex-column">
                     <div className="row">
-                        <div className="col-md-7">
+                        <div className="col-12 col-xl-7">
                             <div className="tag"> {data.data.tag} </div>
                             <div className="banner-title">{data.data.title}</div>
                             {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}
