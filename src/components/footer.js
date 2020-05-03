@@ -173,7 +173,7 @@ const Footer = ({ data }) => {
               <div className="order-2 order-md-1">
                 <h5 className="d-none d-md-block">{footerData.f2.edges[0].node.title}</h5>
                 {/* {JSON.stringify(footerData.f2.edges[0].node.social)} */}
-                <div className="social-icons d-none d-md-block">
+                <div className="social-icons d-none d-md-flex">
                   {footerData.f2.edges[0].node.social.map((q, i) => {
                     return (
                       <a href={q.link} target="_blank" rel="noopener noreferrer">

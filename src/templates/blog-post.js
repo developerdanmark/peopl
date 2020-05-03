@@ -32,9 +32,6 @@ const blogPost = ({ pageContext = {} }) => {
                 <div className="container">
                     <div className="row pb-5">
                         <div className="col-md-8 pb-5">
-                            <div className="post-image">
-                                {pageContext.post.mainImage && <img src={pageContext.post.mainImage.asset.fluid.src} alt={pageContext.post.title} />}
-                            </div>
                             {pageContext.post.categories.map((q, i) => {
                                 return (
                                     <div className="tag"> {q.slug.current} </div>
@@ -43,6 +40,9 @@ const blogPost = ({ pageContext = {} }) => {
                             <h1> {pageContext.post.title} </h1>
                             <div className="post-date">
                                 <Moment format="D. MMM YYYY" >{pageContext.post.publishedAt}</Moment>
+                            </div>
+                            <div className="post-image">
+                                {pageContext.post.mainImage && <img src={pageContext.post.mainImage.asset.fluid.src} alt={pageContext.post.title} />}
                             </div>
                             {pageContext.post._rawBody && <BlockContent serializers={serializer} blocks={pageContext.post._rawBody} />}
                         </div>
