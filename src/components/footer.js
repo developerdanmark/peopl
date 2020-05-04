@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from "gatsby"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Image from './image';
+// import Image from './image';
 import Img from "gatsby-image"
 import BlockContent from "@sanity/block-content-to-react"
 import LazyLoad from 'react-lazyload';
@@ -77,6 +77,14 @@ const Footer = ({ data }) => {
                   mapLong
                   mapLat
                   zoom
+                  badge {
+                    asset {
+                      fluid {
+                        src
+                        srcWebp
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -238,7 +246,8 @@ const Footer = ({ data }) => {
             </div>
             <div className="col-md-12 order-4 order-xl-5">
               <div className="logo-block mt-4">
-                <Image />
+                <div className="footerbadges"><img src={footerData.f4.edges[0].node.badge.asset.fluid.src} alt="badge" /></div>
+                {/* <Image /> */}
               </div>
             </div>
           </div>

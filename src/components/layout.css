@@ -763,6 +763,13 @@ pre tt:after {
   margin-bottom: 35px;
 }
 
+@media (max-width: 420px) {
+  .blog-banner .banner-title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
 .post-list .post {
   position: relative;
   height: 600px;
@@ -1329,7 +1336,6 @@ footer .logo-block {
 
 footer .logo-block .footerbadges {
   width: 412px;
-  height: 73px;
   margin: 0 10px;
 }
 

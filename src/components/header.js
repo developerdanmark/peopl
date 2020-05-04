@@ -108,7 +108,7 @@ const Header = ({ siteTitle, navbarWhite }) => {
               <img src={data.site.edges[0].node.logoDark.asset.fluid.src} alt="logo" />
             </a>
           </LazyLoad>
-          <div className="d-flex justify-content-end align-items-center">
+          <div className="d-none d-md-flex justify-content-end align-items-center">
             {data.menus.edges[0].node.routes.map((q, i) => {
               return (
                 <Link key={i}
