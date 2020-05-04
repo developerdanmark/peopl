@@ -12,7 +12,7 @@ const ReferencesHeader = (data) => {
                         <img src={data.data.image.asset.fluid.src} alt={data.data.title} />
                     </LazyLoad>
                 </div>
-                <div className="container layer2 d-flex justify-content-center align-items-start py-4 py-md-0 flex-column">
+                <div className="container layer2 d-block d-md-flex justify-content-center align-items-start py-5 py-md-0 flex-column">
                     <div className="row">
                         {/*  */}
                         <div className="col-12 col-xl-7">

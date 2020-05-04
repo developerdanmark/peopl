@@ -674,6 +674,14 @@ pre tt:after {
   width: 100px;
   height: auto;
 }
+@media (max-width: 768px) {
+  .site-header {
+    height: 70px;
+  }
+  .blog-banner {
+    padding-top: 70px;
+  }
+}
 .banner {
   /* background: url('../images/bg-image.jpg'); */
   padding-top: 114px;
@@ -720,7 +728,6 @@ pre tt:after {
   }
 }
 .blog-banner {
-  /* height: 700px; */
   padding-top: 104px;
   background: #F3F5F5;
 }
@@ -737,6 +744,11 @@ pre tt:after {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 768px) {
+  .blog-banner {
+    padding-top: 70px;
+  }
+}
 @media (min-width: 1140px) {
   .blog-banner .layer1 {
     position: absolute;
@@ -745,6 +757,13 @@ pre tt:after {
 @media (max-width: 1140px) {
   .blog-banner .layer1 img {
     margin: 0 auto;
+  }
+}
+@media (max-width: 330px) {
+  .blog-banner .layer1 img {
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
   }
 }
 .blog-banner .layer2 {
