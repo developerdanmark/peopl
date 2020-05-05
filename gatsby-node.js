@@ -362,6 +362,14 @@ exports.createPages = async ({ graphql, actions }) => {
                         }
                       }
                     }
+                    badge {
+                      asset {
+                        fluid {
+                          src
+                          srcWebp
+                        }
+                      }
+                    }
                   }
                   ... on SanityVideoHeader {
                     _key

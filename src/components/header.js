@@ -135,7 +135,7 @@ const Header = ({ siteTitle, navbarWhite }) => {
               <li><Link key={i} className="py-2 px-4 d-inline-block" to={q.routes && q.routes.slug.current} > {q.title} </Link></li>
             )
           })}
-          <Link className="py-2 px-5 d-inline-block ml-4 btn btn-contact" to="kontakt">Kontakt</Link>
+          <Link className="py-2 px-4 d-inline-block" to="kontakt">Kontakt</Link>
         </ul>
       </nav>
     </>

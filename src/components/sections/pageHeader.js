@@ -1,50 +1,12 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 import BlockContent from "@sanity/block-content-to-react"
 import LazyLoad from "react-lazyload"
 
 const PageHeader = ({ data }) => {
-  const images = useStaticQuery(graphql`
-    query {
-      bg: file(relativePath: { eq: "bg-image.jpg" }) {
-        childImageSharp {
-            fluid(maxWidth: 1500) {
-            ...GatsbyImageSharpFluid
-            }
-        }
-      },
-      badge1: file(relativePath: { eq: "badge-1.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      badge2: file(relativePath: { eq: "badge-2.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      badge3: file(relativePath: { eq: "badge-3.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      badge4: file(relativePath: { eq: "badge-4.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-    }
-  `)
+
   const bg = data.bgImage.asset.fluid.src
+
   return (
     <div className="position-relative banner overflow-hidden bg-light" style={{ background: `url(${bg})`, backgroundSize: 'cover' }}>
       <div className="container">
@@ -62,10 +24,7 @@ const PageHeader = ({ data }) => {
               {data._rawBody && <BlockContent blocks={data._rawBody} />}
             </div>
             <div className="logo-block mt-4">
-              <div className="badge-1"><Img fluid={images.badge1.childImageSharp.fluid} /></div>
-              <div className="badge-2"><Img fluid={images.badge2.childImageSharp.fluid} /></div>
-              <div className="badge-3"><Img fluid={images.badge3.childImageSharp.fluid} /></div>
-              <div className="badge-4"><Img fluid={images.badge4.childImageSharp.fluid} /></div>
+              <div className="badge"> <img src={data.badge.asset.fluid.src} alt={data.title} /> </div>
             </div>
           </div>
           <div className="col-xl-5 col-lg-6 d-flex justify-content-center">

@@ -1003,11 +1003,11 @@ pre tt:after {
 /* .banner .logo-block .badge .gatsby-image-wrapper img {
   object-fit: contain !important;
 } */
-/* .banner .logo-block .badge {
+.banner .logo-block .badge {
   width: 530px;
   height: auto;
   margin: 0 10px;
-} */
+}
 @media (max-width: 767px) {
   .banner .logo-block .badge {
     width: 350px;

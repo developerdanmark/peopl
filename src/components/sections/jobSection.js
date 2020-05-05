@@ -145,7 +145,7 @@ const JobSection = (data) => {
                 </div>
                 <div className="col-lg-4 py-4">
                     <div className="sidebar">
-                        <div className="title">Seneste blogindlæg</div>
+                        <div className="title">Seneste jobopslag</div>
                         <ul className="category-list">
                             {posts.data.edges.slice(0, 5).map((q) => {
                                 return (

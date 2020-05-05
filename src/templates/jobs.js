@@ -48,7 +48,7 @@ const blogPost = ({ pageContext = {} }) => {
                         </div>
                         <div className="col-lg-4 py-5">
                             <div className="sidebar py-5">
-                                <div className="title">Seneste blogindlæg</div>
+                                <div className="title">Seneste jobopslag</div>
                                 {/* <code>
                                     {JSON.stringify(pageContext.posts)}
                                 </code> */}
