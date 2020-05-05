@@ -13,7 +13,7 @@ const ColoredSection = (data) => {
             <div className="color-block py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 d-flex align-items-center">
+                        <div className="col-md-6 d-flex pb-5 pb-md-0 align-items-center">
                             <LazyLoad>
                                 <div className="trustpilot-image"><img src={data.data.image.asset.fluid.src} alt={data.data.title} /></div>
                             </LazyLoad>

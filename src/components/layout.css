@@ -674,10 +674,14 @@ pre tt:after {
   width: 100px;
   height: auto;
 }
+.logo img,
+.logodark img {
+  margin-bottom: 0;
+}
 @media (max-width: 768px) {
-  .site-header {
+  /* .site-header {
     height: 70px;
-  }
+  } */
   .blog-banner {
     padding-top: 70px;
   }
@@ -728,7 +732,7 @@ pre tt:after {
   }
 }
 .blog-banner {
-  padding-top: 104px;
+  padding-top: 114px;
   background: #F3F5F5;
 }
 .blog-banner img {

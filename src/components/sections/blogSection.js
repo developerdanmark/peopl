@@ -65,7 +65,8 @@ const BlogSection = (data) => {
         }
     `)
 
-    const [category, setCategory] = useState("all");
+    let cat = window.history.state.cat != null ? window.history.state.cat : "all"
+    const [category, setCategory] = useState(cat);
     // const [postList, setPostList] = useState([]);
 
 
@@ -158,7 +159,7 @@ const BlogSection = (data) => {
                         <ul className="category-list">
                             {posts.data.edges.slice(0, 5).map((q) => {
                                 return (
-                                    <li className={q.node.slug.current}> <Link to={'blog/' + q.node.slug.current}> {q.node.title} </Link> </li>
+                                    <li className={q.node.slug.current}> <Link to={'viden/' + q.node.categories[0].slug.current + '/' + q.node.slug.current}> {q.node.title} </Link> </li>
                                 )
                             })}
                         </ul>
@@ -166,7 +167,7 @@ const BlogSection = (data) => {
                         <ul className="category-list">
                             {posts.categories.edges.map((q) => {
                                 return (
-                                    <li className={q.node.slug.current}> <Link to={'category/' + q.node.slug.current}> {q.node.title} </Link> </li>
+                                    <li className={q.node.slug.current}> <Link to={'viden'} onClick={() => setCategory(q.node.slug.current)}> {q.node.title} </Link> </li>
                                 )
                             })}
                         </ul>

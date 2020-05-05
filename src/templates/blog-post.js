@@ -55,7 +55,7 @@ const blogPost = ({ pageContext = {} }) => {
                                 <ul className="category-list">
                                     {pageContext.posts.map((q) => {
                                         return (
-                                            <li className={q.node.slug.current}> <Link to={'blog/' + q.node.slug.current}> {q.node.title} </Link> </li>
+                                            <li className={q.node.slug.current}> <Link to={'viden/' + q.node.categories[0].slug.current + '/' + q.node.slug.current}> {q.node.title} </Link> </li>
                                         )
                                     })}
                                 </ul>
@@ -63,7 +63,7 @@ const blogPost = ({ pageContext = {} }) => {
                                 <ul className="category-list">
                                     {pageContext.categories.map((q) => {
                                         return (
-                                            <li className={q.node.slug.current}> <Link to={'category/' + q.node.slug.current}> {q.node.title} </Link> </li>
+                                            <li className={q.node.slug.current}> <Link to={'viden'} state={{ cat: q.node.slug.current }}> {q.node.title} </Link> </li>
                                         )
                                     })}
                                 </ul>

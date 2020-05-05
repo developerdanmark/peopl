@@ -20,6 +20,11 @@ const ContentSection = (data) => {
                         slug {
                             current
                         }
+                        categories {
+                            slug {
+                                current
+                            }
+                        }
                     }
                 }
             }
@@ -76,7 +81,7 @@ const ContentSection = (data) => {
                         <ul className="category-list">
                             {posts.data.edges.slice(0, 5).map((q, i) => {
                                 return (
-                                    <li key={i} className={q.node.slug.current}> <Link to={'blog/' + q.node.slug.current}> {q.node.title} {i} </Link> </li>
+                                    <li className={q.node.slug.current}> <Link to={'viden/' + q.node.categories[0].slug.current + '/' + q.node.slug.current}> {q.node.title} </Link> </li>
                                 )
                             })}
                         </ul>
@@ -84,7 +89,7 @@ const ContentSection = (data) => {
                         <ul className="category-list">
                             {posts.categories.edges.map((q, i) => {
                                 return (
-                                    <li key={i} className={q.node.slug.current}> <Link to={'category/' + q.node.slug.current}> {q.node.title} </Link> </li>
+                                    <li key={i} className={q.node.slug.current}> <Link to={'viden'} state={{ cat: q.node.slug.current }} > {q.node.title} </Link> </li>
                                 )
                             })}
                         </ul>
