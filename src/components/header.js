@@ -118,7 +118,7 @@ const Header = ({ siteTitle, navbarWhite }) => {
                 </Link>
               )
             })}
-            <Link className="py-2 px-5 d-none d-xl-inline-block ml-4 btn btn-contact" to="contact">Kontakt</Link>
+            <Link className="py-2 px-5 d-none d-xl-inline-block ml-4 btn btn-contact" to="kontakt">Kontakt</Link>
           </div>
           <button class="menu-button d-xl-none" onClick={() => setOpen(!open)} >
             <span></span>
