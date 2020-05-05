@@ -753,12 +753,12 @@ pre tt:after {
     padding-top: 70px;
   }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   .blog-banner .layer1 {
     position: absolute;
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
   .blog-banner .layer1 img {
     margin: 0 auto;
   }
@@ -1099,7 +1099,7 @@ pre tt:after {
   background: #f3f5f5;
   height: 120px;
 }
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
   .logo-block-full .brand-block {
     overflow-x: scroll;
   }
@@ -1376,7 +1376,7 @@ footer .map-container iframe {
   height: 100%;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
   footer .col-map {
     height: 300px;
   }
