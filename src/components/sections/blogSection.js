@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useStaticQuery } from 'gatsby';
 import Moment from 'react-moment';
 import LazyLoad from 'react-lazyload';
@@ -64,11 +64,13 @@ const BlogSection = (data) => {
 
         }
     `)
-
-    let cat = window.history.state.cat != null ? window.history.state.cat : "all"
-    const [category, setCategory] = useState(cat);
-    // const [postList, setPostList] = useState([]);
-
+    
+    
+    const [category, setCategory] = useState("all");
+    
+    useEffect(() => {
+        window.history.state.cat != null ? setCategory(window.history.state.cat) : setCategory("all")
+    }, [])
 
     const result = posts.data.edges
         .map(item => ({
