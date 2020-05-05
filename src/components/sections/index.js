@@ -7,6 +7,7 @@ export { default as LeftImageSection } from "./leftImageSection"
 export { default as RightImageSection } from "./rightImageSection"
 export { default as TitleSection } from "./titleSection"
 export { default as BlogSection } from "./blogSection"
+export { default as JobSection } from "./jobSection"
 export { default as ContentSection } from "./contentSection"
 export { default as Space } from "./space"
 

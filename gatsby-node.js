@@ -21,6 +21,49 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        allSanityJobCategory {
+          edges {
+            node {
+              _id
+              _type
+              title
+              description
+              slug {
+                current
+              }
+            }
+          }
+        }
+        allSanityJob {
+          edges {
+            node {
+              _id
+              _type
+              title
+              excerpt
+              slug {
+                current
+              }
+              _rawBody
+              mainImage {
+                asset {
+                  fluid {
+                    src
+                    srcWebp
+                  }
+                }
+              }
+              categories {
+                _id
+                title
+                slug {
+                  current
+                }
+              }
+            }
+          }
+        }
+
         allSanityPost {
           edges {
             node {
@@ -64,6 +107,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        
         allSanityRoute {
           edges {
             node {
@@ -291,6 +335,11 @@ exports.createPages = async ({ graphql, actions }) => {
                     _type
                     title
                   }
+                  ... on SanityJobSection {
+                    _key
+                    _type
+                    title
+                  }
                   ... on SanityPageHeader {
                     _key
                     _type
@@ -367,6 +416,18 @@ exports.createPages = async ({ graphql, actions }) => {
         path,
         component: require.resolve("./src/templates/blog-post.js"),
         context: { slug: edge.node.slug.current, post: edge.node, posts: posts, categories: categories },
+      })
+    })
+    
+    const jobs = result.data.allSanityJob.edges || []
+    const jobCategories = result.data.allSanityJobCategory.edges || []
+    jobs.forEach((edge, index) => {
+      const cat = edge.node.categories[0].slug.current
+      const path = `/job/${cat}/${edge.node.slug.current}`
+      createPage({
+        path,
+        component: require.resolve("./src/templates/jobs.js"),
+        context: { slug: edge.node.slug.current, post: edge.node, posts: jobs, categories: jobCategories },
       })
     })
   }

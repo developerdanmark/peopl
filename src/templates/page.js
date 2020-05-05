@@ -16,8 +16,9 @@ import {
     TitleSection,
     Space,
     BlogSection,
+    JobSection,
     ContentSection,
-    VideoHeader
+    VideoHeader,
 } from "../components/sections"
 
 const page = ({ pageContext = {} }) => {
@@ -85,6 +86,10 @@ const page = ({ pageContext = {} }) => {
                         case 'blogSection':
                             return (
                                 <BlogSection key={i} data={section} />
+                            )
+                        case 'jobSection':
+                            return (
+                                <JobSection key={i} data={section} />
                             )
                         case 'pageHeader':
                             return (
