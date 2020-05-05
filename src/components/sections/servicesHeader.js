@@ -18,7 +18,7 @@ const ServicesHeader = (data) => {
                             <div className="tag"> {data.data.tag} </div>
                             <div className="banner-title">{data.data.title}</div>
                             {data.data._rawBody && <BlockContent blocks={data.data._rawBody} />}
-                            <Link className="btn btn-peopl">Vil du høre mere?</Link>
+                            {data.data.buttonText && <Link to={data.data.buttonLink} className="btn btn-peopl"> {data.data.buttonText} </Link>}
                         </div>
                         <div className="col-md-5 d-flex justify-content-center align-items-end pr-md-0 flex-column">
 

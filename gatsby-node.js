@@ -235,6 +235,8 @@ exports.createPages = async ({ graphql, actions }) => {
                     _type
                     title
                     tag
+                    buttonText
+                    buttonLink
                     _rawBody
                     image {
                       asset {
@@ -266,6 +268,8 @@ exports.createPages = async ({ graphql, actions }) => {
                     _type
                     title
                     tag
+                    buttonText
+                    buttonLink
                     _rawBody
                     image {
                       asset {
