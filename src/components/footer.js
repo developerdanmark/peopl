@@ -246,8 +246,10 @@ const Footer = ({ data }) => {
             </div>
             <div className="col-md-12 order-4 order-xl-5">
               <div className="logo-block mt-4">
-                <div className="footerbadges"><img src={footerData.f4.edges[0].node.badge.asset.fluid.src} alt="badge" /></div>
-                {/* <Image /> */}
+                <LazyLoad>
+                  <div className="footerbadges"><img src={footerData.f4.edges[0].node.badge.asset.fluid.src} alt="badge" /></div>
+                  {/* <Image /> */}
+                </LazyLoad>
               </div>
             </div>
           </div>
