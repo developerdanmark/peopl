@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import LazyLoad from "react-lazyload"
+import MailForm from "../mailForm"
 
 const HomeHeader = ({ data }) => {
   const images = useStaticQuery(graphql`
@@ -55,27 +56,7 @@ const HomeHeader = ({ data }) => {
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 d-flex justify-content-center">
-              <div className="banner-form">
-                <div className="form-title">
-                  Skal vi også vækste <br /> din virksomhed?
-                  </div>
-                <div className="form-subtitle">
-                  Lad os invitere dig ind til et <br /> uforpligtende møde
-                  </div>
-                <div className="form-group">
-                  <label htmlFor="name">Navn</label>
-                  <input type="text" className="form-control" id="name" name="name" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="phone">Telefon</label>
-                  <input type="tel" className="form-control" id="phone" name="phone" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" />
-                </div>
-                <button type="submit" className="btn btn-banner-form">Bliv kontaktet</button>
-              </div>
+              <MailForm />
             </div>
           </div>
         </div>
