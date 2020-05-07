@@ -40,7 +40,8 @@ import React from 'react'
 
 const MailForm = () => {
     return (
-        <form className="banner-form" name="contact" method="POST" data-netlify="true">
+        <form className="banner-form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <input type="hidden" name="bot-field" />
             <div className="form-title">
                 Skal vi også vækste <br /> din virksomhed?
             </div>
