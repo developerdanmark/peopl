@@ -151,7 +151,7 @@ const Footer = ({ data }) => {
             </div>
             <div className="form-group col-md-3">
               <label htmlFor="name">&nbsp;</label>
-              <input type="submit" id="name" className="form-control" value="Kontakt mig" />
+              <input type="submit" className="form-control" value="Kontakt mig" />
             </div>
           </div>
         </div>
