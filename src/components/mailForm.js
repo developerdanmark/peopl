@@ -1,68 +1,92 @@
-import React from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
 
+class MailForm extends Component {
 
-// constructor(props) {
-//     super(props)
-//     this.ContactForm = React.createRef()
-//     this.state = {
-//       name: "",
-//       email: "",
-//       message: "",
-//     }
-//   }
+    handleSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        axios({
+            method: "POST",
+            url: "http://localhost:3002/send",
+            data: {
+                name: name,
+                phone: phone,
+                email: email,
+            }
+        }).then((response) => {
+            if (response.data.msg === 'success') {
+                alert("Message Sent.");
+                this.resetForm()
+            } else if (response.data.msg === 'fail') {
+                alert("Message failed to send.")
+            }
+        })
+    }
 
-// encode = data => {
-//     return Object.keys(data)
-//       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-//       .join("&")
-//   }
+    resetForm() {
+        document.getElementById('contact-form').reset();
+    }
 
-// const handleSubmit = event => {
-//     event.preventDefault()
-//     const form = this.ContactForm.current
-//     fetch("/", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-//       body: this.encode({
-//         "form-name": form.getAttribute("name"),
-//         ...this.state,
-//       }),
-//     })
-//       .then(() => navigate("/"))
-//       .catch(error => alert(error))
-
-//     this.setState({
-//       name: "",
-//       email: "",
-//       message: "",
-//     })
-//   }
-
-const MailForm = () => {
-    return (
-        <form className="banner-form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-            <input type="hidden" name="bot-field" />
-            <div className="form-title">
-                Skal vi også vækste <br /> din virksomhed?
+    render() {
+        return (
+            <div className="col-sm-4 offset-sm-4">
+                <form className="banner-form" name="contact" method="POST" onSubmit={this.handleSubmit.bind(this)}>
+                    <input type="hidden" name="bot-field" />
+                    <div className="form-title">
+                        Skal vi også vækste <br /> din virksomhed?
+                    </div>
+                    <div className="form-subtitle">
+                        Lad os invitere dig ind til et <br /> uforpligtende møde
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="name">Navn</label>
+                        <input type="text" className="form-control" id="name" name="name" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="phone">Telefon</label>
+                        <input type="tel" className="form-control" id="phone" name="phone" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" />
+                    </div>
+                    <button type="submit" className="btn btn-banner-form">Bliv kontaktet</button>
+                </form>
             </div>
-            <div className="form-subtitle">
-                Lad os invitere dig ind til et <br /> uforpligtende møde
-            </div>
-            <div className="form-group">
-                <label htmlFor="name">Navn</label>
-                <input type="text" className="form-control" id="name" name="name" />
-            </div>
-            <div className="form-group">
-                <label htmlFor="phone">Telefon</label>
-                <input type="tel" className="form-control" id="phone" name="phone" />
-            </div>
-            <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" />
-            </div>
-            <button type="submit" className="btn btn-banner-form">Bliv kontaktet</button>
-        </form>
-    )
+        )
+    }
 }
 
-export default MailForm
+export default MailForm;
+
+// const MailForm = () => {
+//     return (
+        // <form className="banner-form" name="contact" method="POST"  onSubmit={this.handleSubmit.bind(this)}>
+        //     <input type="hidden" name="bot-field" />
+        //     <div className="form-title">
+        //         Skal vi også vækste <br /> din virksomhed?
+        //     </div>
+        //     <div className="form-subtitle">
+        //         Lad os invitere dig ind til et <br /> uforpligtende møde
+        //     </div>
+        //     <div className="form-group">
+        //         <label htmlFor="name">Navn</label>
+        //         <input type="text" className="form-control" id="name" name="name" />
+        //     </div>
+        //     <div className="form-group">
+        //         <label htmlFor="phone">Telefon</label>
+        //         <input type="tel" className="form-control" id="phone" name="phone" />
+        //     </div>
+        //     <div className="form-group">
+        //         <label htmlFor="email">Email</label>
+        //         <input type="email" className="form-control" id="email" name="email" aria-describedby="emailHelp" />
+        //     </div>
+        //     <button type="submit" className="btn btn-banner-form">Bliv kontaktet</button>
+        // </form>
+//     )
+// }
+
+// export default MailForm
