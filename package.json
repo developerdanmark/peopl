@@ -33,6 +33,7 @@
     "google-map-react": "^1.1.7",
     "moment": "^2.24.0",
     "nodemailer": "^6.4.6",
+    "nodemailer-react": "^0.1.0",
     "or": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -41,6 +42,7 @@
     "react-lazyload": "^2.6.7",
     "react-moment": "^0.9.7",
     "react-scroll-to-element": "^0.2.0",
+    "smtp-server": "^3.6.0",
     "yarn": "^1.22.4"
   },
   "devDependencies": {
